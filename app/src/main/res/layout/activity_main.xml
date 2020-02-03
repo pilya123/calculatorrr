@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:text="bin"
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:text="dec"
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:text="hex"
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="75dp"
+        android:layout_height="18dp"
+        android:text="number 1:"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="156dp"
+        android:layout_height="23dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="69dp"
+        android:layout_height="23dp"
+        android:text="number 2:"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="155dp"
+        android:layout_height="22dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="58dp"
+        android:layout_height="23dp"
+        android:text="and"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="55dp"
+        android:layout_height="23dp"
+        android:text="or"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="56dp"
+        android:layout_height="22dp"
+        android:text="xor"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton7"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:text="not"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="77dp"
+        android:layout_height="43dp"
+        android:text="Reset"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="108dp"
+        android:layout_height="44dp"
+        android:text="Calculate"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="42dp"
+        android:layout_height="27dp"
+        android:text="Result"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="211dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="178dp"
+        android:layout_height="23dp"
+        android:text="(is not used for the shift-r/l)"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="147dp"
+        android:layout_height="23dp"
+        android:text="number of bits to shift:"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="156dp"
+        android:layout_height="22dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton8"
+        android:layout_width="57dp"
+        android:layout_height="22dp"
+        android:text="sh-l"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton9"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:text="sh-r"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="337dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bin"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dec"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="206dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="205dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hex"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="417dp" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="194dp"
+        android:layout_height="29dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="417dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton10"
+        android:layout_width="73dp"
+        android:layout_height="21dp"
+        android:text="8bits"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16bits"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32bits"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="1"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="2"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="3"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="4"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="5"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="6"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="7"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="8"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="9"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="A"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="B"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="C"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="D"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="E"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="F"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="456dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hamming (7,4) code"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data(Binary)"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <EditText
+        android:id="@+id/editText13"
+        android:layout_width="123dp"
+        android:layout_height="27dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="549dp" />
+
+    <EditText
+        android:id="@+id/editText14"
+        android:layout_width="134dp"
+        android:layout_height="24dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gray to Binary"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="466dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="152dp"
+        android:layout_height="27dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="151dp"
+        android:layout_height="28dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="549dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="609dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parity bit"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="624dp" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="182dp"
+        android:layout_height="22dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="621dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="651dp" />
+
+    <EditText
+        android:id="@+id/editText15"
+        android:layout_width="214dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="653dp" />
+
+
+
