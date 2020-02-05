@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalculatorBinHex</string>
+    <string name="number_2">number 2:</string>
 </resources>
