@@ -8,8 +8,8 @@
 
     <RadioGroup
         android:id="@+id/type_select"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_width="69dp"
+        android:layout_height="142dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -51,8 +51,8 @@
         android:id="@+id/textView"
         android:layout_width="75dp"
         android:layout_height="18dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:text="number 1:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,8 +61,8 @@
         android:id="@+id/input_number_1"
         android:layout_width="156dp"
         android:layout_height="30dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,8 +72,8 @@
         android:id="@+id/textView2"
         android:layout_width="69dp"
         android:layout_height="23dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
         android:text="@string/number_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,8 +93,8 @@
         android:id="@+id/textView7"
         android:layout_width="178dp"
         android:layout_height="23dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="64dp"
         android:text="(is not used for the shift-r/l)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,8 +103,8 @@
         android:id="@+id/textView8"
         android:layout_width="147dp"
         android:layout_height="23dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="122dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="128dp"
         android:text="number of bits to shift:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -120,46 +120,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="58dp"
-        android:layout_height="23dp"
-        android:text="and"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="184dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton5"
-        android:layout_width="55dp"
-        android:layout_height="23dp"
-        android:text="or"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="184dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton6"
-        android:layout_width="56dp"
-        android:layout_height="22dp"
-        android:text="xor"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="184dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton7"
-        android:layout_width="58dp"
-        android:layout_height="22dp"
-        android:text="not"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="184dp" />
-
     <Button
         android:id="@+id/reset_btn"
-        android:layout_width="77dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="226dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="67dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="124dp"
         android:onClick="onResetClick"
         android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -167,7 +137,8 @@
         android:id="@+id/calculate_btn"
         android:layout_width="108dp"
         android:layout_height="44dp"
-        android:layout_marginTop="247dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="12dp"
         android:onClick="onCalculate"
         android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
@@ -177,301 +148,319 @@
         android:id="@+id/textView3"
         android:layout_width="42dp"
         android:layout_height="27dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="376dp"
         android:text="Result"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="211dp"
         android:layout_height="28dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="375dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioButton8"
-        android:layout_width="57dp"
-        android:layout_height="22dp"
-        android:text="sh-l"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="185dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton9"
-        android:layout_width="61dp"
-        android:layout_height="21dp"
-        android:text="sh-r"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="186dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="337dp" />
+        app:layout_constraintGuide_begin="365dp" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="334dp"
         android:text="bin"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="297dp"
         android:text="dec"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="383dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText10"
         android:layout_width="206dp"
         android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="328dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText11"
         android:layout_width="205dp"
         android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="288dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="383dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="256dp"
         android:text="hex"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText12"
         android:layout_width="194dp"
         android:layout_height="29dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="246dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioButton
-        android:id="@+id/radioButton10"
-        android:layout_width="73dp"
-        android:layout_height="21dp"
-        android:text="8bits"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="346dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="16bits"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="371dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="32bits"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="411dp" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="0"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="2"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="3"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="4"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="5"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="6"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="7"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="211dp" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="8"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="211dp" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginStart="319dp"
+        android:layout_marginTop="234dp"
         android:text="9"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/button7"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:text="A"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="246dp" />
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="234dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button8"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:text="B"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="246dp" />
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="234dp"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="234dp"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="214dp"
+        android:layout_marginTop="234dp"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="234dp"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="249dp"
+        android:layout_marginTop="234dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="234dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="234dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="234dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginBottom="419dp"
         android:text="C"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="246dp" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="D"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="247dp" />
-
-    <Button
-        android:id="@+id/button20"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:text="E"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="76dp" />
 
     <Button
         android:id="@+id/button21"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginStart="181dp"
+        android:layout_marginBottom="419dp"
         android:text="F"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="247dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="41dp"
+        android:text="B"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="277dp" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginBottom="419dp"
+        android:text="E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="419dp"
+        android:text="A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="111dp"
+        android:text="D"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="277dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.625171" />
+        app:layout_constraintGuide_begin="483dp" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="224dp"
         android:text="Hamming (7,4) code"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="193dp"
         android:text="Data(Binary)"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="492dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText13"
         android:layout_width="123dp"
         android:layout_height="27dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="154dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="128dp"
         android:text="Result"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="549dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText14"
         android:layout_width="134dp"
         android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="96dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="575dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="193dp"
         android:text="Gray to Binary"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="466dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editText"
@@ -480,66 +469,150 @@
         android:ems="10"
         android:inputType="number"
         tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="492dp" />
+        tools:layout_editor_absoluteY="550dp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="128dp"
         android:text="Result"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="525dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="151dp"
-        android:layout_height="28dp"
+        android:layout_width="149dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="96dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="549dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="609dp" />
+        app:layout_constraintGuide_end="87dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="53dp"
         android:text="Parity bit"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="624dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText6"
         android:layout_width="182dp"
         android:layout_height="22dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginBottom="50dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="621dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="16dp"
         android:text="Result"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="651dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editText15"
-        android:layout_width="214dp"
-        android:layout_height="26dp"
+        android:layout_width="230dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="6dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="653dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="157dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton8bits"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:text="8bits" />
+
+        <RadioButton
+            android:id="@+id/radioButton16bits"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:text="16bits" />
+
+        <RadioButton
+            android:id="@+id/radioButton32bits"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:text="32bits" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="74dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/and"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="and" />
+
+        <RadioButton
+            android:id="@+id/or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="or" />
+
+        <RadioButton
+            android:id="@+id/xor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xor" />
+
+        <RadioButton
+            android:id="@+id/not"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="not" />
+
+        <RadioButton
+            android:id="@+id/sh-l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sh-l" />
+
+        <RadioButton
+            android:id="@+id/sh-r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sh-r" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
