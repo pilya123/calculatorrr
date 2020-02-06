@@ -6,63 +6,119 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="55dp"
-        android:layout_height="24dp"
-        android:text="bin"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="26dp" />
+    <RadioGroup
+        android:id="@+id/type_select"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:text="dec"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="59dp" />
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" -->
 
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:text="hex"
-        tools:layout_editor_absoluteX="326dp"
-        tools:layout_editor_absoluteY="90dp" />
+
+        <RadioButton
+            android:id="@+id/radio_bin"
+            android:layout_width="57dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:text="bin" />
+
+        <RadioButton
+            android:id="@+id/radio_dec"
+            android:layout_width="57dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="28dp"
+            android:text="dec"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radio_hex"
+            android:layout_width="57dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="28dp"
+            android:text="hex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="75dp"
         android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="number 1:"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/input_number_1"
         android:layout_width="156dp"
-        android:layout_height="23dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="69dp"
         android:layout_height="23dp"
-        android:text="number 2:"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="67dp" />
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="67dp"
+        android:text="@string/number_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/input_number_2"
         android:layout_width="155dp"
-        android:layout_height="22dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="92dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="178dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="67dp"
+        android:text="(is not used for the shift-r/l)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="147dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="122dp"
+        android:text="number of bits to shift:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_number_of_bits_to_shift"
+        android:layout_width="156dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="154dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioButton
         android:id="@+id/radioButton4"
@@ -97,20 +153,25 @@
         tools:layout_editor_absoluteY="184dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/reset_btn"
         android:layout_width="77dp"
         android:layout_height="43dp"
-        android:text="Reset"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="248dp" />
+        android:layout_marginStart="226dp"
+        android:layout_marginTop="248dp"
+        android:onClick="onResetClick"
+        android:text="@string/reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/calculate_btn"
         android:layout_width="108dp"
         android:layout_height="44dp"
-        android:text="Calculate"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="247dp" />
+        android:layout_marginTop="247dp"
+        android:onClick="onCalculate"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -128,31 +189,6 @@
         android:inputType="number"
         tools:layout_editor_absoluteX="46dp"
         tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="178dp"
-        android:layout_height="23dp"
-        android:text="(is not used for the shift-r/l)"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="67dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="147dp"
-        android:layout_height="23dp"
-        android:text="number of bits to shift:"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="122dp" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="156dp"
-        android:layout_height="22dp"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="154dp" />
 
     <RadioButton
         android:id="@+id/radioButton8"
@@ -385,7 +421,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="456dp" />
+        app:layout_constraintGuide_percent="0.625171" />
 
     <TextView
         android:id="@+id/textView12"
@@ -506,4 +542,4 @@
         tools:layout_editor_absoluteY="653dp" />
 
 
-
+</androidx.constraintlayout.widget.ConstraintLayout>
