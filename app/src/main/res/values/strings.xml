@@ -3,4 +3,14 @@
     <string name="number_2">number 2:</string>
     <string name="reset">Reset</string>
     <string name="calculate">Calculate</string>
+    <string name="and">and</string>
+    <string name="or">or</string>
+    <string name="xor">xor</string>
+    <string name="not">not</string>
+    <string name="sh_l">sh-l</string>
+    <string name="sh_r">sh-r</string>
+    <string name="bin">bin</string>
+    <string name="dec">dec</string>
+    <string name="hex">hex</string>
+    <string name="result">Result</string>
 </resources>
