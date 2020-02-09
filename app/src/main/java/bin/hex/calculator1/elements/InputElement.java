@@ -12,12 +12,8 @@ public class InputElement {
         this.view = (EditText) v;
     }
 
-    public Integer getConvertedValue(){
-        String value = view.getText().toString();
-        if(value.isEmpty()){
-            return 0;
-        }
-        return Integer.parseInt(view.getText().toString());
+    public String getConvertedValue(){
+        return view.getText().toString();
     }
 
     public void clear(){

@@ -14,4 +14,13 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void tempTest(){
+        int a = 5;
+        int b = 7;
+//        0101 & 0111=0101 = 5
+        System.out.println("a&b = " + (a | b));
+    }
+
 }

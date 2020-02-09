@@ -16,6 +16,8 @@ import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
 import static android.widget.Toast.makeText;
+import static bin.hex.calculator1.math.Calculate.Operator.SH_L;
+import static bin.hex.calculator1.math.Calculate.Operator.SH_R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private OperatorsRadioGroup operatorGroup;
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
-    private Integer number1, number2, numberOfBitsToShift;
+    private String number1, number2, numberOfBitsToShift;
     private String result;
 
     private Calculate.NumeralSystem numSystem;
@@ -80,23 +82,27 @@ public class MainActivity extends AppCompatActivity {
         String msg = "Please select a valid Numeral system.";
         if(numSystem == null){
             Log.log(msg);
-            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT);
+            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             return;
+        }
+        String val_1 = number1;
+        String val_2 = number2;
+
+        if(operator == SH_R || operator == SH_L){
+            val_2 = numberOfBitsToShift;
         }
 
         switch (numSystem){
             default:
-                makeText(MainActivity.this, msg, Toast.LENGTH_SHORT);
+                makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             case BIN:
-                int bin = Calculate.getBin(number1, number2, operator);
-                result = String.valueOf(bin);
+                result = Calculate.getBin(val_1, val_2, operator);
                 break;
             case DEC:
-                int dec = Calculate.getDec(number1, number2, operator);
-                result = String.valueOf(dec);
+                result = Calculate.getDec(val_1, val_2, operator);
                 break;
             case HEX:
-                result = Calculate.getHex(number1, numberOfBitsToShift, operator);
+                result = Calculate.getHex(val_1, val_2, operator);
                 break;
         }
         Log.log("Calculation completed.");
@@ -106,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateResultsOnUi(){
-        resultInput.setValue(String.valueOf(result));
+        resultInput.setValue(result);
         Log.log("Result was updated with '"+result+"'.");
     }
 
