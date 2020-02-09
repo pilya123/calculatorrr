@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
     private String number1, number2, numberOfBitsToShift;
-    private String result;
+    private String result = "";
 
     private Calculate.NumeralSystem numSystem;
     private Calculate.Operator operator;
@@ -91,19 +91,31 @@ public class MainActivity extends AppCompatActivity {
         if(operator == SH_R || operator == SH_L){
             val_2 = numberOfBitsToShift;
         }
+        if(operator == null){
+            msg = "Please select a valid Operator.";
+            Log.log(msg);
+            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+        }
 
-        switch (numSystem){
-            default:
-                makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-            case BIN:
-                result = Calculate.getBin(val_1, val_2, operator);
-                break;
-            case DEC:
-                result = Calculate.getDec(val_1, val_2, operator);
-                break;
-            case HEX:
-                result = Calculate.getHex(val_1, val_2, operator);
-                break;
+        if(val_1.isEmpty() || val_2.isEmpty()){
+            msg = "Please populate values for calculation.";
+            Log.log(msg);
+            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            switch (numSystem) {
+                default:
+                    makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                case BIN:
+                    result = Calculate.getBin(val_1, val_2, operator);
+                    break;
+                case DEC:
+                    result = Calculate.getDec(val_1, val_2, operator);
+                    break;
+                case HEX:
+                    result = Calculate.getHex(val_1, val_2, operator);
+                    break;
+            }
         }
         Log.log("Calculation completed.");
 
