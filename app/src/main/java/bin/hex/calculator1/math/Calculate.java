@@ -48,19 +48,53 @@ public class Calculate {
     }
 
 
-    public static Integer getBin(int x, int y, Operator o){
-        //TODO: logic for BIN should be added
-        return 0;
+    private static Integer calculateOperator(int x, int y, Operator o){
+        switch (o){
+            default:
+                Log.log("Not valid operator for bin <" + o + ">.");
+                return 0;
+            case SH_L:
+                return shitLeft(x, y);
+            case SH_R:
+                return shitRight(x, y);
+            case AND:
+                return x & y;
+            case OR:
+                return x | y;
+            case XOR:
+                return x ^ y;
+            case NOT:
+                return ~x;
+        }
     }
 
-    public static Integer getDec(int x, int y, Operator o){
-        //TODO: logic for DEC should be added
-        return 0;
+    private static Integer shitLeft(int value, int position){
+        return value << position;
     }
 
-    public static String getHex(int n, int numToShift, Operator o){
-        //TODO: logic for HEX should be added
-        return null;
+    private static Integer shitRight(int value, int position){
+        return value >> position;
+    }
+
+
+    public static String getBin(String x, String y, Operator o){
+        int v1 = Integer.parseInt(x, 2);
+        int v2 = Integer.parseInt(y, 2);
+        int result = calculateOperator(v1, v2, o);
+        return Integer.toBinaryString(result);
+    }
+
+    public static String getDec(String x, String y, Operator o){
+        int v1 = Integer.parseInt(x);
+        int v2 = Integer.parseInt(y);
+        return String.valueOf(calculateOperator(v1, v2, o));
+    }
+
+    public static String getHex(String hex, String y, Operator o){
+        int v1 = Integer.parseInt(hex, 16);
+        int v2 = Integer.parseInt(hex, 16);
+        int result = calculateOperator(v1, v2, o);
+        return Integer.toHexString(result);
     }
 
 
