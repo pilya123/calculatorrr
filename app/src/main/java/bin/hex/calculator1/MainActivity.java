@@ -138,6 +138,8 @@ public class MainActivity extends AppCompatActivity {
         Log.log("Reset all values.");
 
     }
+// 1)не считает кнопка OR
+// 2) когда использую кнопку sh-l/r - из программы вылетает
 
 
 }
