@@ -3,7 +3,10 @@ package bin.hex.calculator1.math;
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
-
+    // 1)не работает кнопка OR
+// 2) когда использую кнопку sh-l/r - выводит: Please select a valid operator / Please populate values for calculation( не выбрасывает из программы ), но  не считает.
+// 3) при использовании hex : 1. and - выводит в ответе верхнее значение , которое мы ввели. 2. xor - при всех значениях выводит 0.
+    // все остальное работает отлично
     public enum NumeralSystem{
         BIN, DEC, HEX;
 
