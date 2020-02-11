@@ -13,4 +13,10 @@
     <string name="dec">dec</string>
     <string name="hex">hex</string>
     <string name="result">Result</string>
+    <string-array name="bits">
+        <item>8bits</item>
+        <item>16bits</item>
+        <item>32bits</item>
+    </string-array>
 </resources>
+

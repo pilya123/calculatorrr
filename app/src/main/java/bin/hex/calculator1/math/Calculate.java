@@ -7,6 +7,7 @@ public class Calculate {
 // 2) когда использую кнопку sh-l/r - выводит: Please select a valid operator / Please populate values for calculation( не выбрасывает из программы ), но  не считает.
 // 3) при использовании hex : 1. and - выводит в ответе верхнее значение , которое мы ввели. 2. xor - при всех значениях выводит 0.
     // все остальное работает отлично
+    // еще добавил комментарии кода для спинера(8-16-32 битов) в MainActivity(строчка 50)
     public enum NumeralSystem{
         BIN, DEC, HEX;
 

@@ -47,7 +47,13 @@ public class MainActivity extends AppCompatActivity {
         numeralSystemRadioGroup = new NumeralSysRadioGroup((RadioGroup) findViewById(R.id.num_sys_select));
 
         calculate = findViewById(R.id.calculate_btn);
+        // Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
 
+        //ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+        // android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.bits));
+        //myAdapter.setDropDownViewResource(android.R.Layout.simple_spinner_dropdown_item);
+        //mySpinner.setAdapter(myAdapter);
+        // там еще надо было добавить стринги в res/strings , я добавил , но не знаю правильно или нет
     }
 
     public void onOperatorSelect(View v){
