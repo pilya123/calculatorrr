@@ -43,9 +43,9 @@ public class Calculate {
                     return Calculate.Operator.XOR;
                 case "not":
                     return Calculate.Operator.NOT;
-                case "sh_l":
+                case "sh-l":
                     return Calculate.Operator.SH_L;
-                case "sh_r":
+                case "sh-r":
                     return Calculate.Operator.SH_R;
             }
         }

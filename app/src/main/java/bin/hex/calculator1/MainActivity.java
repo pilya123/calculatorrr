@@ -64,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
     private void setOperator(){
         int radioBtnId = operatorGroup.getSelectedId();
         String radioValue = ((RadioButton)findViewById(radioBtnId)).getText().toString();
+        Log.log("Operator radiobutton value = " + radioValue);
         operator = Calculate.Operator.get(radioValue);
+        Log.log("Operator updated to " + operator);
     }
 
     public void onNumeralSelection(View v){
@@ -85,33 +87,28 @@ public class MainActivity extends AppCompatActivity {
         number2 = inputNumber_2.getConvertedValue();
         numberOfBitsToShift = inputNumberOfBitsToShift.getConvertedValue();
 
-        String msg = "Please select a valid Numeral system.";
-        if(numSystem == null){
-            Log.log(msg);
-            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-            return;
-        }
         String val_1 = number1;
         String val_2 = number2;
+
 
         if(operator == SH_R || operator == SH_L){
             val_2 = numberOfBitsToShift;
         }
-        if(operator == null){
-            msg = "Please select a valid Operator.";
-            Log.log(msg);
-            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-        }
 
-        if(val_1.isEmpty() || val_2.isEmpty()){
-            msg = "Please populate values for calculation.";
-            Log.log(msg);
-            makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-        }
-        else {
+        boolean operatorPopulated = assertIsNotTrue(operator == null, "Please select a valid Operator.");
+        boolean numSystemSelected = assertIsNotTrue(numSystem == null, "Please select a valid Numeral system.");
+        boolean val1Populated = assertIsNotTrue(val_1.isEmpty(), "Number 1 is empty.");
+        boolean val2Populated = assertIsNotTrue((val_2 == null || val_2.isEmpty()), "Number 2 is empty.");
+
+
+        if(numSystemSelected &&
+                operatorPopulated
+                && val1Populated
+                && val2Populated)
+        {
             switch (numSystem) {
                 default:
-                    makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                    makeText(MainActivity.this, "Invalid numeral system selected", Toast.LENGTH_SHORT).show();
                 case BIN:
                     result = Calculate.getBin(val_1, val_2, operator);
                     break;
@@ -126,6 +123,16 @@ public class MainActivity extends AppCompatActivity {
         Log.log("Calculation completed.");
 
         updateResultsOnUi();
+
+    }
+
+    private boolean assertIsNotTrue(boolean condition, String error){
+        if(condition){
+            Log.log(error);
+            makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
 
     }
 
