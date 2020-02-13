@@ -23,12 +23,12 @@ import static bin.hex.calculator1.math.Calculate.Operator.SH_R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private InputElement inputNumber_1, inputNumber_2, inputNumberOfBitsToShift, resultInput;
+    private InputElement inputNumber_1, inputNumber_2, /*inputNumberOfBitsToShift,*/ resultInput;
     private OperatorsRadioGroup operatorGroup;
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
 
-    private String number1, number2, numberOfBitsToShift;
+    private String number1, number2/*, numberOfBitsToShift*/;
     private String result = "";
 
 //    private static Calculate.Bit BITS;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         inputNumber_1 = new InputElement(findViewById(R.id.input_number_1));
         inputNumber_2 = new InputElement(findViewById(R.id.input_number_2));
-        inputNumberOfBitsToShift = new InputElement(findViewById(R.id.input_number_of_bits_to_shift));
+//        inputNumberOfBitsToShift = new InputElement(findViewById(R.id.input_number_of_bits_to_shift));
         resultInput = new InputElement(findViewById(R.id.result_input));
 
         operatorGroup = new OperatorsRadioGroup((RadioGroup) findViewById(R.id.operator));
@@ -102,15 +102,17 @@ public class MainActivity extends AppCompatActivity {
 
         number1 = inputNumber_1.getConvertedValue();
         number2 = inputNumber_2.getConvertedValue();
-        numberOfBitsToShift = inputNumberOfBitsToShift.getConvertedValue();
+//        numberOfBitsToShift = inputNumberOfBitsToShift.getConvertedValue();
 
         String val_1 = number1;
         String val_2 = number2;
 
 
-        if(operator == SH_R || operator == SH_L){
-            val_2 = numberOfBitsToShift;
-        }
+//        if(operator == SH_R || operator == SH_L){
+//            val_2 = numberOfBitsToShift;
+//        }
+        Log.log("Number 1 = '"+val_1+"'");
+        Log.log("Number 2 = '"+val_2+"'");
 
         boolean operatorPopulated = assertIsNotTrue(operator == null, "Please select a valid Operator.");
         boolean numSystemSelected = assertIsNotTrue(numSystem == null, "Please select a valid Numeral system.");
@@ -127,7 +129,11 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     makeText(MainActivity.this, "Invalid numeral system selected", Toast.LENGTH_SHORT).show();
                 case BIN:
-                    result = Calculate.getBin(val_1, val_2, operator);
+                    try {
+                        result = Calculate.getBin(val_1, val_2, operator);
+                    }catch (NumberFormatException e){
+                        showError("Not a valid value for binary input. \n(Input 1 = '"+val_1+"'; Input 2 ='"+val_2+"')");
+                    }
                     break;
                 case DEC:
                     result = Calculate.getDec(val_1, val_2, operator);
@@ -143,10 +149,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void showError(String msg){
+        makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+    }
+
     private boolean assertIsNotTrue(boolean condition, String error){
         if(condition){
             Log.log(error);
-            makeText(MainActivity.this, error, Toast.LENGTH_SHORT).show();
+            showError(error);
             return false;
         }
         return true;
@@ -163,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
         inputNumber_1.clear();
         inputNumber_2.clear();
-        inputNumberOfBitsToShift.clear();
+//        inputNumberOfBitsToShift.clear();
         resultInput.clear();
         Log.log("Reset all values.");
 
