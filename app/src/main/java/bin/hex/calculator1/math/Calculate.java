@@ -94,9 +94,10 @@ public class Calculate {
         return String.valueOf(calculateOperator(v1, v2, o));
     }
 
-    public static String getHex(String hex, String y, Operator o){
-        int v1 = Integer.parseInt(hex, 16);
-        int v2 = Integer.parseInt(hex, 16);
+    public static String getHex(String x, String y, Operator o){
+        int v1 = Integer.parseInt(x, 16);
+        int v2 = Integer.parseInt(y, 16);
+        System.out.println("Converted INT (from hex) value1 = '"+v1+"', value2 = '"+v2+"'");
         int result = calculateOperator(v1, v2, o);
         return Integer.toHexString(result);
     }

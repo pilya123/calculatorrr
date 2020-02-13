@@ -2,6 +2,7 @@ package bin.hex.calculator1;
 
 import org.junit.Test;
 
+import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
 import static org.junit.Assert.*;
@@ -27,9 +28,7 @@ public class ExampleUnitTest {
 
     @Test
     public void test2(){
-        int parsed = Integer.parseInt("0111", 2);
-        System.out.println("Parsed value: " + parsed);
-        System.out.println(Integer.toBinaryString(parsed));
+        System.out.println(Calculate.getHex("1", "4", Calculate.Operator.XOR));
 
     }
 
