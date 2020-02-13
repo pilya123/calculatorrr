@@ -43,10 +43,27 @@ public class Calculate {
                     return Calculate.Operator.XOR;
                 case "not":
                     return Calculate.Operator.NOT;
-                case "sh_l":
+                case "sh-l":
                     return Calculate.Operator.SH_L;
-                case "sh_r":
+                case "sh-r":
                     return Calculate.Operator.SH_R;
+            }
+        }
+    }
+
+    public enum Bit{
+        BITS_8, BITS_16, BITS_32;
+
+        public static Bit get(String v){
+            switch (v){
+                default:
+                    return null;
+                case "8bits":
+                    return BITS_8;
+                case "16bits":
+                    return BITS_16;
+                case "32bits":
+                    return BITS_32;
             }
         }
     }
@@ -94,9 +111,10 @@ public class Calculate {
         return String.valueOf(calculateOperator(v1, v2, o));
     }
 
-    public static String getHex(String hex, String y, Operator o){
-        int v1 = Integer.parseInt(hex, 16);
-        int v2 = Integer.parseInt(hex, 16);
+    public static String getHex(String x, String y, Operator o){
+        int v1 = Integer.parseInt(x, 16);
+        int v2 = Integer.parseInt(y, 16);
+        System.out.println("Converted INT (from hex) value1 = '"+v1+"', value2 = '"+v2+"'");
         int result = calculateOperator(v1, v2, o);
         return Integer.toHexString(result);
     }

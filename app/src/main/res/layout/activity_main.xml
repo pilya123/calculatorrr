@@ -10,7 +10,6 @@
         android:id="@+id/num_sys_select"
         android:layout_width="69dp"
         android:layout_height="142dp"
-        android:onClick="onNumeralSelection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -53,7 +52,6 @@
         android:layout_height="218dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="76dp"
-        android:onClick="onOperatorSelect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -68,6 +66,7 @@
             android:id="@+id/or"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onOperatorSelect"
             android:text="@string/or" />
 
         <RadioButton
@@ -565,39 +564,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:layout_width="92dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="372dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+<!--    <RadioGroup-->
+<!--        android:layout_width="92dp"-->
+<!--        android:layout_height="107dp"-->
+<!--        android:layout_marginTop="372dp"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-        <RadioButton
-            android:id="@+id/radioButton8bits"
-            android:layout_width="89dp"
-            android:layout_height="wrap_content"
-            android:text="8bits" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton8bits"-->
+<!--            android:layout_width="89dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="8bits" />-->
 
-        <RadioButton
-            android:id="@+id/radioButton16bits"
-            android:layout_width="89dp"
-            android:layout_height="wrap_content"
-            android:text="16bits" />
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton16bits"-->
+<!--            android:layout_width="89dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="16bits" />-->
 
-        <RadioButton
-            android:id="@+id/radioButton32bits"
-            android:layout_width="89dp"
-            android:layout_height="wrap_content"
-            android:text="32bits" />
-    </RadioGroup>
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioButton32bits"-->
+<!--            android:layout_width="89dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="32bits" />-->
+<!--    </RadioGroup>-->
 
     <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="53dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="326dp"
+        android:id="@+id/bit_select_spinner"
+        android:layout_width="141dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="248dp"
+        android:entries="@array/bits"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
