@@ -51,6 +51,23 @@ public class Calculate {
         }
     }
 
+    public enum Bit{
+        BITS_8, BITS_16, BITS_32;
+
+        public static Bit get(String v){
+            switch (v){
+                default:
+                    return null;
+                case "8bits":
+                    return BITS_8;
+                case "16bits":
+                    return BITS_16;
+                case "32bits":
+                    return BITS_32;
+            }
+        }
+    }
+
 
     private static Integer calculateOperator(int x, int y, Operator o){
         switch (o){

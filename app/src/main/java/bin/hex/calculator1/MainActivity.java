@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import bin.hex.calculator1.elements.InputElement;
 import bin.hex.calculator1.elements.NumeralSysRadioGroup;
 import bin.hex.calculator1.elements.OperatorsRadioGroup;
+import bin.hex.calculator1.listeners.CustomOnItemSelectedListener;
 import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
@@ -25,13 +27,18 @@ public class MainActivity extends AppCompatActivity {
     private OperatorsRadioGroup operatorGroup;
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
+
     private String number1, number2, numberOfBitsToShift;
     private String result = "";
 
+//    private static Calculate.Bit BITS;
     private Calculate.NumeralSystem numSystem;
     private Calculate.Operator operator;
 
+
     private Button calculate;
+
+    private Spinner bitSelectSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,19 +54,29 @@ public class MainActivity extends AppCompatActivity {
         numeralSystemRadioGroup = new NumeralSysRadioGroup((RadioGroup) findViewById(R.id.num_sys_select));
 
         calculate = findViewById(R.id.calculate_btn);
-        // Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
 
-        //ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-        // android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.bits));
-        //myAdapter.setDropDownViewResource(android.R.Layout.simple_spinner_dropdown_item);
-        //mySpinner.setAdapter(myAdapter);
-        // там еще надо было добавить стринги в res/strings , я добавил , но не знаю правильно или нет
+        addListenerOnSpinnerItemSelection();
+
+    }
+
+    public void addListenerOnSpinnerItemSelection() {
+        bitSelectSpinner = findViewById(R.id.bit_select_spinner);
+        bitSelectSpinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
     }
 
     public void onOperatorSelect(View v){
         setOperator();
-
     }
+
+//    public static void setBits(Calculate.Bit bit){
+//        BITS = bit;
+//        Log.log("Bits applied: " + BITS);
+//    }
+
+//    public void onClickToBitsSelect(View v){
+//        Log.log("Bits calculated according to " + BITS);
+//        //TODO:
+//    }
 
     private void setOperator(){
         int radioBtnId = operatorGroup.getSelectedId();
@@ -151,7 +168,5 @@ public class MainActivity extends AppCompatActivity {
         Log.log("Reset all values.");
 
     }
-
-
 
 }
