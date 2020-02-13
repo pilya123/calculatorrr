@@ -117,7 +117,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="number 1:"
+        android:text="@string/number_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,10 +138,12 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="100dp"
         android:ems="10"
-        android:hint="not used for the sh-r/l"
+        android:hint="number 2 or value for sh-r/l"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
 
     <TextView
         android:id="@+id/textView8"
@@ -163,6 +165,8 @@
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+        -->
 
 
     <Button
