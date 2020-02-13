@@ -133,7 +133,7 @@
 
     <EditText
         android:id="@+id/input_number_2"
-        android:layout_width="180dp"
+        android:layout_width="225dp"
         android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="100dp"
@@ -599,8 +599,8 @@
         android:id="@+id/bit_select_spinner"
         android:layout_width="141dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="336dp"
         android:entries="@array/bits"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

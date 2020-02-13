@@ -3,11 +3,166 @@ package bin.hex.calculator1.math;
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
-    // 1)не работает кнопка OR
-// 2) когда использую кнопку sh-l/r - выводит: Please select a valid operator / Please populate values for calculation( не выбрасывает из программы ), но  не считает.
-// 3) при использовании hex : 1. and - выводит в ответе верхнее значение , которое мы ввели. 2. xor - при всех значениях выводит 0.
-    // все остальное работает отлично
-    // еще добавил комментарии кода для спинера(8-16-32 битов) в MainActivity(строчка 50)
+//Parity bit - при вводе числа( к примеру 10) должно выводить в ответе четное или нечетное число ,
+    //я нашел код в котором введенное число   выводит бинарный  вариант числа и ответ: четное или не четное,
+    // вот ответ как он выглядит: 10 in binary is 1010 ,10 contains even bits , на всякий случай оставлю ссылку https://www.techiedelight.com/compute-parity-number-using-lookup-table/ и вот сам код
+    //class Main
+//{
+//	// Function to find parity of number x
+//	public static boolean findParity(int x)
+//	{
+//		// Hexacedimal to Binary conversion can be checked here
+//		// www.binaryhexconverter.com/hex-to-binary-converter
+//
+//		// recursively divide the (32-bit) integer into two equal
+//		// halves and take their XOR until only 1 bit is left
+//
+//		x = (x & 0x0000FFFF)^(x >> 16);
+//		x = (x & 0x000000FF)^(x >> 8);
+//		x = (x & 0x0000000F)^(x >> 4);
+//		x = (x & 0x00000003)^(x >> 2);
+//		x = (x & 0x00000001)^(x >> 1);
+//
+//		// return the last bit
+//		return (x & 1) == 1;
+//	}
+//
+//	public static void main(String[] args)
+//	{
+//		int x = 127;
+//
+//		System.out.println(x + " in binary is " + Integer.toBinaryString(x));
+//
+//		if (findParity(x)) {
+//			System.out.println(x + " contains odd bits");
+//		}
+//		else {
+//			System.out.println(x + " contains even bits");
+//		}
+//	}
+//}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Gray to binary - число грея(его форма такая же как и бинарная) конвертировать в обычное бинарное число. Оставляю ссылку https://www.geeksforgeeks.org/gray-to-binary-and-binary-to-gray-conversion/
+    //  в ссылке код для gray to binary и binary to gray , ответ там сделан строчкой : Gray code of 01001 is 01101 , Binary code of 01101 is 01001 , можно  так оставить ,
+    // или сделать как у нас в дизайне , ввести число грея в строчку Gray to binary : 01001 и  что бы вывело ответ в  Result: 01101
+    //import java.io.*;
+//class code_conversion {
+//    // Helper function to xor
+//    // two characters
+//    char xor_c(char a, char b)
+//    {
+//        return (a == b) ? '0' : '1';
+//    }
+//
+//    // Helper function to flip the bit
+//    char flip(char c)
+//    {
+//        return (c == '0') ? '1' : '0';
+//    }
+    //   // function to convert gray code
+//    // string to binary string
+//    String graytoBinary(String gray)
+//    {
+//        String binary = "";
+//
+//        // MSB of binary code is same
+//        // as gray code
+//        binary += gray.charAt(0);
+//
+//        // Compute remaining bits
+//        for (int i = 1; i < gray.length(); i++) {
+//            // If current bit is 0,
+//            // concatenate previous bit
+//            if (gray.charAt(i) == '0')
+//                binary += binary.charAt(i - 1);
+//
+//            // Else, concatenate invert of
+//            // previous bit
+//            else
+//                binary += flip(binary.charAt(i - 1));
+//        }
+//
+//        return binary;
+//    }
+//Hamming code - в строку вводится бинарный код , к примеру 0101 , в ответе как я понял должно выдавать избыточные биты(в случае 0101 - это r1=0, r2=1, r4=0) от введенного числа 0101,
+    // и ответ в виде Хамминга codeword : 0100101. Полный ответ выглядит так : Generated hamming code r1 =0 r2 = 1 r4 = 0  0100101 , строчку для ответа я наверное увеличу , так как ответ не маленький 
+    // ссылка на код и сам код https://www.geeksforgeeks.org/hamming-code-implementation-in-java/
+    //// Java code to implement Hamming Code
+//class HammingCode {
+//
+//    // print elements of array
+//    static void print(int ar[])
+//    {
+//        for (int i = 1; i < ar.length; i++) {
+//            System.out.print(ar[i]);
+//        }
+//        System.out.println();
+//    }
+//
+//    // calculating value of redundant bits
+//    static int[] calculation(int[] ar, int r)
+//    {
+//        for (int i = 0; i < r; i++) {
+//            int x = (int)Math.pow(2, i);
+//            for (int j = 1; j < ar.length; j++) {
+//                if (((j >> i) & 1) == 1) {
+//                    if (x != j)
+//                        ar[x] = ar[x] ^ ar[j];
+//                }
+//            }
+//            System.out.println("r" + x + " = "
+//                               + ar[x]);
+//        }
+//
+//        return ar;
+//    }
+//
+//    static int[] generateCode(String str, int M, int r)
+//    {
+//        int[] ar = new int[r + M + 1];
+//        int j = 0;
+//        for (int i = 1; i < ar.length; i++) {
+//            if ((Math.ceil(Math.log(i) / Math.log(2))
+//                 - Math.floor(Math.log(i) / Math.log(2)))
+//                == 0) {
+//
+//                // if i == 2^n for n in (0, 1, 2, .....)
+//                // then ar[i]=0
+//                // codeword[i] = 0 ----
+//                // redundant bits are intialized
+//                // with value 0
+//                ar[i] = 0;
+//            }
+//            else {
+//
+//                // codeword[i] = dataword[j]
+//                ar[i] = (int)(str.charAt(j) - '0');
+//                j++;
+//            }
+//        }
+//        return ar;
+//    }
+//
+//    // Driver code
+//    public static void main(String[] args)
+//    {
+//
+//        // input message
+//        String str = "0101";
+//        int M = str.length();
+//        int r = 1;
+//
+//        while (Math.pow(2, r) < (M + r + 1)) {
+//            // r is number of redundant bits
+//            r++;
+//        }
+//        int[] ar = generateCode(str, M, r);
+//
+//        System.out.println("Generated hamming code ");
+//        ar = calculation(ar, r);
+//        print(ar);
+//    }
+//}
     public enum NumeralSystem{
         BIN, DEC, HEX;
 
