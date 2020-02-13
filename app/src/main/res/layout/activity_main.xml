@@ -598,7 +598,6 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="248dp"
         android:entries="@array/bits"
-        android:onClick="onClickToBitsSelect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
