@@ -304,7 +304,12 @@ public class Calculate {
 
     public static String getBin(String x, String y, Operator o){
         int v1 = Integer.parseInt(x, 2);
-        int v2 = Integer.parseInt(y, 2);
+        int v2;
+        if(o == Operator.SH_L || o == Operator.SH_R){
+            v2 = Integer.parseInt(y);
+        }else{
+            v2 = Integer.parseInt(y, 2);
+        }
         int result = calculateOperator(v1, v2, o);
         return Integer.toBinaryString(result);
     }
