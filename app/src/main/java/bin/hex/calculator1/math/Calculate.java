@@ -3,7 +3,7 @@ package bin.hex.calculator1.math;
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
-//PARITY BIT -  https://www.techiedelight.com/compute-parity-number-using-lookup-table/ 
+//PARITY BIT -  https://www.techiedelight.com/compute-parity-number-using-lookup-table/
     //class Main
 //{
 //	// Function to find parity of number x
