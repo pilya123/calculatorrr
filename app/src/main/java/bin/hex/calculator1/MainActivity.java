@@ -13,6 +13,7 @@ import android.widget.Toast;
 import bin.hex.calculator1.elements.InputElement;
 import bin.hex.calculator1.elements.NumeralSysRadioGroup;
 import bin.hex.calculator1.elements.OperatorsRadioGroup;
+import bin.hex.calculator1.listeners.ConvertTypeSelectedListener;
 import bin.hex.calculator1.listeners.CustomOnItemSelectedListener;
 import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
@@ -21,15 +22,17 @@ import static android.widget.Toast.makeText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private InputElement inputNumber_1, inputNumber_2, /*inputNumberOfBitsToShift,*/ resultInput;
+    private InputElement inputNumber_1, inputNumber_2,  resultInput;
     private OperatorsRadioGroup operatorGroup;
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
+    private InputElement convertInput, convertResultInput;
 
-    private String number1, number2/*, numberOfBitsToShift*/;
-    private String result = "";
 
-//    private static Calculate.Bit BITS;
+    private String number1, number2;
+    private String calculateResult = "";
+    private String convertResultValue = "";
+
     private Calculate.NumeralSystem numSystem;
     private Calculate.Operator operator;
 
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private Button calculate;
 
     private Spinner bitSelectSpinner;
+    private Spinner selectConvertType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,16 +49,23 @@ public class MainActivity extends AppCompatActivity {
 
         inputNumber_1 = new InputElement(findViewById(R.id.input_number_1));
         inputNumber_2 = new InputElement(findViewById(R.id.input_number_2));
-//        inputNumberOfBitsToShift = new InputElement(findViewById(R.id.input_number_of_bits_to_shift));
         resultInput = new InputElement(findViewById(R.id.result_input));
 
         operatorGroup = new OperatorsRadioGroup((RadioGroup) findViewById(R.id.operator));
         numeralSystemRadioGroup = new NumeralSysRadioGroup((RadioGroup) findViewById(R.id.num_sys_select));
-
         calculate = findViewById(R.id.calculate_btn);
 
-        addListenerOnSpinnerItemSelection();
+        convertInput = new InputElement(findViewById(R.id.convert_input));
+        convertResultInput = new InputElement(findViewById(R.id.convert_result));
 
+        addListenerOnSpinnerItemSelection();
+        addListenerOnConvertTypeSpinner();
+
+    }
+
+    public void addListenerOnConvertTypeSpinner(){
+        selectConvertType = findViewById(R.id.convert_type_spinner);
+        selectConvertType.setOnItemSelectedListener(new ConvertTypeSelectedListener());
     }
 
     public void addListenerOnSpinnerItemSelection() {
@@ -114,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void onCalculate(View v){
         Button btn = (Button) v;
 
@@ -143,22 +153,22 @@ public class MainActivity extends AppCompatActivity {
                     makeText(MainActivity.this, "Invalid numeral system selected", Toast.LENGTH_SHORT).show();
                 case BIN:
                     try {
-                        result = Calculate.getBin(val_1, val_2, operator);
+                        calculateResult = Calculate.getBin(val_1, val_2, operator);
                     }catch (NumberFormatException e){
                         showError("Not a valid value for binary input. \n(Input 1 = '"+val_1+"'; Input 2 ='"+val_2+"')");
                     }
                     break;
                 case DEC:
-                    result = Calculate.getDec(val_1, val_2, operator);
+                    calculateResult = Calculate.getDec(val_1, val_2, operator);
                     break;
                 case HEX:
-                    result = Calculate.getHex(val_1, val_2, operator);
+                    calculateResult = Calculate.getHex(val_1, val_2, operator);
                     break;
             }
         }
         Log.log("Calculation completed.");
 
-        updateResultsOnUi();
+        updateCalculatedResultsOnUi();
 
     }
 
@@ -176,9 +186,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void updateResultsOnUi(){
-        resultInput.setValue(result);
-        Log.log("Result was updated with '"+result+"'.");
+    public void onConvertClick(View view){
+        Calculate.ConvertType type = CalculatorState.getConvertType();
+        String initial = convertInput.getConvertedValue();
+
+        if(initial == null || initial.isEmpty()){
+            showError("Please type initial value.");
+            return;
+        }
+
+        switch (type){
+            default:
+                showError("Please select a valid convert type.");
+                return;
+            case HAMMING:
+                convertResultValue = Calculate.convertHamming(initial);
+                break;
+            case GRAY:
+                convertResultValue = Calculate.convertToGray(initial);
+                break;
+            case PARITY:
+                convertResultValue = Calculate.convertParity(initial);
+                break;
+        }
+
+        updateConvertedResultsOnUi();
+
+    }
+
+    private void updateCalculatedResultsOnUi(){
+        resultInput.setValue(calculateResult);
+        Log.log("Result was updated with '"+ calculateResult +"'.");
+    }
+
+    private void updateConvertedResultsOnUi(){
+        convertResultInput.setValue(convertResultValue);
+        Log.log("Result was updated with '"+ convertResultValue +"'.");
     }
 
     public void onResetClick(View v){
@@ -187,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
         inputNumber_1.clear();
         inputNumber_2.clear();
         resultInput.clear();
+        convertInput.clear();
         Log.log("Reset all values.");
 
     }

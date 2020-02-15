@@ -192,6 +192,30 @@ public class Calculate {
 
             }
         }
+    }
+
+    public enum ConvertType{
+        HAMMING("Hamming"), GRAY("Gray"), PARITY("Parity");
+        private String name;
+
+        ConvertType(String name){
+            this.name = name;
+        }
+
+        public static ConvertType get(String v){
+            switch (v.toLowerCase()){
+                default:
+                    Log.log("Unknown convert type '"+v+"'");
+                    return null;
+                case "hamming":
+                    return HAMMING;
+                case "gray":
+                    return GRAY;
+                case "parity":
+                    return PARITY;
+
+            }
+        }
 
     }
 
@@ -219,7 +243,19 @@ public class Calculate {
     }
 
     public enum Bit{
-        BITS_8, BITS_16, BITS_32;
+        BITS_8("%8s"),
+        BITS_16("%16s"),
+        BITS_32("%32s");
+
+        String formatVal;
+
+        Bit(String formatVal){
+            this.formatVal = formatVal;
+        }
+
+        String getFormatVal(){
+            return formatVal;
+        }
 
         public static Bit get(String v){
             switch (v){
@@ -233,6 +269,7 @@ public class Calculate {
                     return BITS_32;
             }
         }
+
     }
 
 
@@ -284,6 +321,22 @@ public class Calculate {
         System.out.println("Converted INT (from hex) value1 = '"+v1+"', value2 = '"+v2+"'");
         int result = calculateOperator(v1, v2, o);
         return Integer.toHexString(result);
+    }
+
+    public static String toBinary(int x, Bit bit){
+        return String.format(bit.getFormatVal(), Integer.toBinaryString(x)).replaceAll(" ", "0");
+    }
+
+    public static String convertHamming(String initial){
+        return "not implemented"; //TODO
+    }
+
+    public static String convertToGray(String initial){
+        return "not implemented"; //TODO
+    }
+
+    public static String convertParity(String initial){
+        return "not implemented"; //TODO
     }
 
 
