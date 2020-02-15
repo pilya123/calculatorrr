@@ -361,6 +361,69 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="403dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="504dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/converter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="Description of the section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/convert_input"
+            android:layout_width="140dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="52dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/convert_type_spinner"
+            android:layout_width="138dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="60dp"
+            android:entries="@array/converter_types"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="306dp"
+            android:layout_marginTop="49dp"
+            android:onClick="onConvertClick"
+            android:text="@string/convert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/convert_result"
+            android:layout_width="140dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="@string/result"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <!--
     <EditText
         android:id="@+id/editText12"
@@ -477,6 +540,7 @@
 -->
 
 
+    <!--
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -625,7 +689,7 @@
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <!--    <RadioGroup-->
     <!--        android:layout_width="92dp"-->
