@@ -12,6 +12,7 @@
     <string name="bin">bin</string>
     <string name="dec">dec</string>
     <string name="hex">hex</string>
+    <string name="result">Result</string>
     <string name="number_1">number 1:</string>
     <string name="a">A</string>
     <string name="e">E</string>
@@ -20,17 +21,10 @@
     <string name="f">F</string>
     <string name="d">D</string>
     <string name="number_2_or_value_for_sh_r_l">number 2 or value for sh-r/l</string>
-    <string name="convert">Convert</string>
-    <string name="result">Result</string>
     <string-array name="bits">
         <item>8bits</item>
         <item>16bits</item>
         <item>32bits</item>
-    </string-array>
-    <string-array name="converter_types">
-        <item>Hamming</item>
-        <item>Gray</item>
-        <item>Parity</item>
     </string-array>
 </resources>
 
