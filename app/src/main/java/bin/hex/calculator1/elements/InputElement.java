@@ -24,4 +24,8 @@ public class InputElement {
         view.setText(v, TextView.BufferType.EDITABLE);
     }
 
+    public boolean focused(){
+        return view.isFocused();
+    }
+
 }
