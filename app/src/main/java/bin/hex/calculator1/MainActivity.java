@@ -18,8 +18,6 @@ import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
 import static android.widget.Toast.makeText;
-import static bin.hex.calculator1.math.Calculate.Operator.SH_L;
-import static bin.hex.calculator1.math.Calculate.Operator.SH_R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,20 +95,35 @@ public class MainActivity extends AppCompatActivity {
         numSystem = Calculate.NumeralSystem.get(radioValue);
     }
 
+    public void onSymbolButtonClick(View v){
+        Button btn = (Button) v;
+        String btnSymbol = btn.getText().toString();
+
+        if(numSystem != Calculate.NumeralSystem.HEX){
+            showError("Symbols are not available for '"+numSystem+"' mode. ");
+            return;
+        }
+
+        InputElement input = inputNumber_1;
+        if(inputNumber_2.focused()){
+            input = inputNumber_2;
+        }
+
+        String currentInputValue = input.getConvertedValue();
+        input.setValue(currentInputValue + btnSymbol);
+
+    }
+
+
     public void onCalculate(View v){
         Button btn = (Button) v;
 
         number1 = inputNumber_1.getConvertedValue();
         number2 = inputNumber_2.getConvertedValue();
-//        numberOfBitsToShift = inputNumberOfBitsToShift.getConvertedValue();
 
         String val_1 = number1;
         String val_2 = number2;
 
-
-//        if(operator == SH_R || operator == SH_L){
-//            val_2 = numberOfBitsToShift;
-//        }
         Log.log("Number 1 = '"+val_1+"'");
         Log.log("Number 2 = '"+val_2+"'");
 
@@ -173,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
 
         inputNumber_1.clear();
         inputNumber_2.clear();
-//        inputNumberOfBitsToShift.clear();
         resultInput.clear();
         Log.log("Reset all values.");
 
