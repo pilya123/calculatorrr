@@ -3,16 +3,12 @@ package bin.hex.calculator1.math;
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
-//Parity bit - при вводе числа( к примеру 10) должно выводить в ответе четное или нечетное число ,
-    //я нашел код в котором введенное число   выводит бинарный  вариант числа и ответ: четное или не четное,
-    // вот ответ как он выглядит: 10 in binary is 1010 ,10 contains even bits , на всякий случай оставлю ссылку https://www.techiedelight.com/compute-parity-number-using-lookup-table/ и вот сам код
+//PARITY BIT -  https://www.techiedelight.com/compute-parity-number-using-lookup-table/ 
     //class Main
 //{
 //	// Function to find parity of number x
 //	public static boolean findParity(int x)
 //	{
-//		// Hexacedimal to Binary conversion can be checked here
-//		// www.binaryhexconverter.com/hex-to-binary-converter
 //
 //		// recursively divide the (32-bit) integer into two equal
 //		// halves and take their XOR until only 1 bit is left
@@ -29,22 +25,22 @@ public class Calculate {
 //
 //	public static void main(String[] args)
 //	{
-//		int x = 127;
+//		int x = 127; // значение , которое нужно ввести  ()
 //
 //		System.out.println(x + " in binary is " + Integer.toBinaryString(x));
 //
 //		if (findParity(x)) {
-//			System.out.println(x + " contains odd bits");
+//			System.out.println(x + " contains odd bits"); // ответ с введенным числом + contains odd bits
 //		}
 //		else {
-//			System.out.println(x + " contains even bits");
+//			System.out.println(x + " contains even bits"); // ответ с введенным числом + contains even bits
 //		}
 //	}
 //}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Gray to binary - число грея(его форма такая же как и бинарная) конвертировать в обычное бинарное число. Оставляю ссылку https://www.geeksforgeeks.org/gray-to-binary-and-binary-to-gray-conversion/
-    //  в ссылке код для gray to binary и binary to gray , ответ там сделан строчкой : Gray code of 01001 is 01101 , Binary code of 01101 is 01001 , можно  так оставить ,
-    // или сделать как у нас в дизайне , ввести число грея в строчку Gray to binary : 01001 и  что бы вывело ответ в  Result: 01101
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//GRAY TO BINARY  -  https://www.geeksforgeeks.org/gray-to-binary-and-binary-to-gray-conversion/
+
     //import java.io.*;
 //class code_conversion {
 //    // Helper function to xor
@@ -84,9 +80,19 @@ public class Calculate {
 //
 //        return binary;
 //    }
-//Hamming code - в строку вводится бинарный код , к примеру 0101 , в ответе как я понял должно выдавать избыточные биты(в случае 0101 - это r1=0, r2=1, r4=0) от введенного числа 0101,
-    // и ответ в виде Хамминга codeword : 0100101. Полный ответ выглядит так : Generated hamming code r1 =0 r2 = 1 r4 = 0  0100101 , строчку для ответа я наверное увеличу , так как ответ не маленький 
-    // ссылка на код и сам код https://www.geeksforgeeks.org/hamming-code-implementation-in-java/
+    //// Driver program to test above functions
+    //int main()
+    //{
+    //
+    //    string gray = "01101"; // значение для ввода в бинарной форме
+    //    cout << "Binary code of " << gray << " is "
+    //         << graytoBinary(gray) << endl;
+    //    return 0;
+    //}
+    // Result (в этом примере выглядит в такой форсе) : Gray code of 01001 is 01101
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //HAMMING CODE -  https://www.geeksforgeeks.org/hamming-code-implementation-in-java/
     //// Java code to implement Hamming Code
 //class HammingCode {
 //
@@ -148,7 +154,7 @@ public class Calculate {
 //    {
 //
 //        // input message
-//        String str = "0101";
+//        String str = "0101"; // значение для ввода
 //        int M = str.length();
 //        int r = 1;
 //
@@ -158,11 +164,17 @@ public class Calculate {
 //        }
 //        int[] ar = generateCode(str, M, r);
 //
-//        System.out.println("Generated hamming code ");
+//        System.out.println("Generated hamming code "); // поле для ответа
 //        ar = calculation(ar, r);
 //        print(ar);
 //    }
 //}
+    // Result (в данном примере выглядит так ) :
+    //Generated hamming code
+    //r1 = 0  // r1 , r2 , r4 -  это лишние биты
+    //r2 = 1
+    //r4 = 0
+    //0100101
     public enum NumeralSystem{
         BIN, DEC, HEX;
 
