@@ -333,16 +333,19 @@ public class Calculate {
     }
 
     public static String convertHamming(String initial){
-        return "not implemented"; //TODO
+        return HammingCode.calculate(initial);
     }
 
     public static String convertToGray(String initial){
-        return "not implemented"; //TODO
+        return GrayCode.binaryToGray(initial);
     }
 
     public static String convertParity(String initial){
-        return "not implemented"; //TODO
+        return ParityCode.calculate(initial);
     }
+
+
+
 
 
     // Java program to illustrate
