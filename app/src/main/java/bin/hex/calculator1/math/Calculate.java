@@ -89,7 +89,7 @@ public class Calculate {
     //         << graytoBinary(gray) << endl;
     //    return 0;
     //}
-    // Result (в этом примере выглядит в такой форсе) : Gray code of 01001 is 01101
+    
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //HAMMING CODE -  https://www.geeksforgeeks.org/hamming-code-implementation-in-java/
