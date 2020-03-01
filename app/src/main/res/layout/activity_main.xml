@@ -356,16 +356,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="460dp"
         android:layout_marginBottom="252dp"
         android:text="hex"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="403dp"
         android:layout_height="154dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="488dp"
+        android:layout_marginTop="560dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -373,8 +375,8 @@
             android:id="@+id/converter_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="Description of the section"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -382,9 +384,9 @@
         <EditText
             android:id="@+id/convert_input"
             android:layout_width="140dp"
-            android:layout_height="38dp"
+            android:layout_height="40dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="36dp"
             android:ems="10"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
@@ -394,8 +396,8 @@
             android:id="@+id/convert_type_spinner"
             android:layout_width="138dp"
             android:layout_height="26dp"
-            android:layout_marginStart="152dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="36dp"
             android:entries="@array/converter_types"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -413,10 +415,10 @@
 
         <EditText
             android:id="@+id/convert_result"
-            android:layout_width="140dp"
-            android:layout_height="38dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="96dp"
             android:ems="10"
             android:hint="@string/result"
             android:inputType="number"
@@ -424,6 +426,27 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="456dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/convert2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="415dp"
+        android:layout_marginEnd="55dp"
+        android:text="convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--
     <EditText

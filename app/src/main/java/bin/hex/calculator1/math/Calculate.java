@@ -3,178 +3,221 @@ package bin.hex.calculator1.math;
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
-//PARITY BIT -  https://www.techiedelight.com/compute-parity-number-using-lookup-table/
-    //class Main
+//BINARY TO DECIMAL
+    //1.	public class BinaryDecimal {
+//2.
+//3.	    public static void main(String[] args) {
+//4.	        long num = 110110111;
+//5.	        int decimal = convertBinaryToDecimal(num);
+//6.	        System.out.printf("%d in binary = %d in decimal", num, decimal);
+//7.	    }
+//8.
+//9.	    public static int convertBinaryToDecimal(long num)
+//10.	    {
+//11.	        int decimalNumber = 0, i = 0;
+//12.	        long remainder;
+//13.	        while (num != 0)
+//14.	        {
+//15.	            remainder = num % 10;
+//16.	            num /= 10;
+//17.	            decimalNumber += remainder * Math.pow(2, i);
+//18.	            ++i;
+//19.	        }
+//20.	        return decimalNumber;
+//21.	    }
+//22.	}
+////////////////////////////////////////////////////////////////////////////////////////////
+
+//DECIMAL TO BINARY
+//1.	public class DecimalBinary {
+//2.
+//3.	    public static void main(String[] args) {
+//4.	        int num = 19;
+//5.	        long binary = convertDecimalToBinary(num);
+//6.	        System.out.printf("%d in decimal = %d in binary", num, binary);
+//7.	    }
+//8.
+//9.	    public static long convertDecimalToBinary(int n)
+//10.	    {
+//11.	        long binaryNumber = 0;
+//12.	        int remainder, i = 1, step = 1;
+//13.
+//14.	        while (n!=0)
+//15.	        {
+//16.	            remainder = n % 2;
+//17.	            System.out.printf("Step %d: %d/2, Remainder = %d, Quotient = %d\n", step++, n, remainder, n/2);
+//18.	            n /= 2;
+//19.	            binaryNumber += remainder * i;
+//20.	            i *= 10;
+//21.	        }
+//22.	        return binaryNumber;
+//23.	    }
+//24.	}
+ /////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //BINARY TO HEX , https://www.sanfoundry.com/java-program-convert-binary-hexadecimal/
+    //import java.util.Scanner;
+//class Binary_Hexa
+//   {
+//                 Scanner scan;
+//	int num;
+//	void getVal()
+//	    {
+//		System.out.println("Binary to HexaDecimal");
+//		scan = new Scanner(System.in);
+//		System.out.println("\nEnter the number :");
+//		num = Integer.parseInt(scan.nextLine(), 2);
+//	    }
+//	void convert()
+//	   {
+//		String hexa = Integer.toHexString(num);
+//		System.out.println("HexaDecimal Value is : " + hexa);
+//	   }
+//    }
+//class Main_Class
+// {
+//           public static void main(String... q)
+//            {
+//	Binary_Hexa obj = new Binary_Hexa();
+//	obj.getVal();
+//	obj.convert();
+//              }
+//}
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //HEX TO BINARY , https://www.sanfoundry.com/java-program-convert-hexadecimal-binary/
+    //import java.util.Scanner;
+//class Hexa_Binary
+//     {
+//                 Scanner scan;
+//	int num;
+//	void getVal()
+//                     {
+//        		System.out.println("HexaDecimal to Binary");
+//		scan = new Scanner(System.in);
+//		System.out.println("\nEnter the number :");
+//		num = Integer.parseInt(scan.nextLine(), 16);
+//	    }
+//	void convert()
+//    	   {
+//		String binary = Integer.toBinaryString(num);
+//		System.out.println("Binary Value is : " + binary);
+//	   }
+//     }
+//class MainClass
 //{
-//	// Function to find parity of number x
-//	public static boolean findParity(int x)
-//	{
-//
-//		// recursively divide the (32-bit) integer into two equal
-//		// halves and take their XOR until only 1 bit is left
-//
-//		x = (x & 0x0000FFFF)^(x >> 16);
-//		x = (x & 0x000000FF)^(x >> 8);
-//		x = (x & 0x0000000F)^(x >> 4);
-//		x = (x & 0x00000003)^(x >> 2);
-//		x = (x & 0x00000001)^(x >> 1);
-//
-//		// return the last bit
-//		return (x & 1) == 1;
-//	}
-//
-//	public static void main(String[] args)
-//	{
-//		int x = 127; // значение , которое нужно ввести  ()
-//
-//		System.out.println(x + " in binary is " + Integer.toBinaryString(x));
-//
-//		if (findParity(x)) {
-//			System.out.println(x + " contains odd bits"); // ответ с введенным числом + contains odd bits
-//		}
-//		else {
-//			System.out.println(x + " contains even bits"); // ответ с введенным числом + contains even bits
-//		}
-//	}
+//         public static void main(String args[])
+//            {
+//	Hexa_Binary obj = new Hexa_Binary();
+//	obj.getVal();
+//	obj.convert();
+//            }
 //}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//GRAY TO BINARY  -  https://www.geeksforgeeks.org/gray-to-binary-and-binary-to-gray-conversion/
-
+///////////////////////////////////////////////////////////////////////////////////////////////////
+ //DEC TO HEX , https://www.geeksforgeeks.org/program-decimal-hexadecimal-conversion/
+    //// Java program to convert a decimal
+    //// number to hexadecimal number
     //import java.io.*;
-//class code_conversion {
-//    // Helper function to xor
-//    // two characters
-//    char xor_c(char a, char b)
-//    {
-//        return (a == b) ? '0' : '1';
-//    }
-//
-//    // Helper function to flip the bit
-//    char flip(char c)
-//    {
-//        return (c == '0') ? '1' : '0';
-//    }
-    //   // function to convert gray code
-//    // string to binary string
-//    String graytoBinary(String gray)
-//    {
-//        String binary = "";
-//
-//        // MSB of binary code is same
-//        // as gray code
-//        binary += gray.charAt(0);
-//
-//        // Compute remaining bits
-//        for (int i = 1; i < gray.length(); i++) {
-//            // If current bit is 0,
-//            // concatenate previous bit
-//            if (gray.charAt(i) == '0')
-//                binary += binary.charAt(i - 1);
-//
-//            // Else, concatenate invert of
-//            // previous bit
-//            else
-//                binary += flip(binary.charAt(i - 1));
-//        }
-//
-//        return binary;
-//    }
-    //// Driver program to test above functions
-    //int main()
-    //{
     //
-    //    string gray = "01101"; // значение для ввода в бинарной форме
-    //    cout << "Binary code of " << gray << " is "
-    //         << graytoBinary(gray) << endl;
-    //    return 0;
+    //class GFG
+    //{
+    //    // function to convert decimal to hexadecimal
+    //    static void decToHexa(int n)
+    //    {
+    //        // char array to store hexadecimal number
+    //        char[] hexaDeciNum = new char[100];
+    //
+    //        // counter for hexadecimal number array
+    //        int i = 0;
+    //        while(n!=0)
+    //        {
+    //            // temporary variable to store remainder
+    //            int temp  = 0;
+    //
+    //            // storing remainder in temp variable.
+    //            temp = n % 16;
+    //
+    //            // check if temp < 10
+    //            if(temp < 10)
+    //            {
+    //                hexaDeciNum[i] = (char)(temp + 48);
+    //                i++;
+    //            }
+    //            else
+    //            {
+    //                hexaDeciNum[i] = (char)(temp + 55);
+    //                i++;
+    //            }
+    //
+    //            n = n/16;
+    //        }
+    //
+    //        // printing hexadecimal number array in reverse order
+    //        for(int j=i-1; j>=0; j--)
+    //            System.out.print(hexaDeciNum[j]);
+    //    }
+    //
+    //    // driver program
+    //    public static void main (String[] args)
+    //    {
+    //        int n = 2545;
+    //        decToHexa(n);
+    //    }
     //}
-    
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //HAMMING CODE -  https://www.geeksforgeeks.org/hamming-code-implementation-in-java/
-    //// Java code to implement Hamming Code
-//class HammingCode {
-//
-//    // print elements of array
-//    static void print(int ar[])
-//    {
-//        for (int i = 1; i < ar.length; i++) {
-//            System.out.print(ar[i]);
-//        }
-//        System.out.println();
-//    }
-//
-//    // calculating value of redundant bits
-//    static int[] calculation(int[] ar, int r)
-//    {
-//        for (int i = 0; i < r; i++) {
-//            int x = (int)Math.pow(2, i);
-//            for (int j = 1; j < ar.length; j++) {
-//                if (((j >> i) & 1) == 1) {
-//                    if (x != j)
-//                        ar[x] = ar[x] ^ ar[j];
-//                }
-//            }
-//            System.out.println("r" + x + " = "
-//                               + ar[x]);
-//        }
-//
-//        return ar;
-//    }
-//
-//    static int[] generateCode(String str, int M, int r)
-//    {
-//        int[] ar = new int[r + M + 1];
-//        int j = 0;
-//        for (int i = 1; i < ar.length; i++) {
-//            if ((Math.ceil(Math.log(i) / Math.log(2))
-//                 - Math.floor(Math.log(i) / Math.log(2)))
-//                == 0) {
-//
-//                // if i == 2^n for n in (0, 1, 2, .....)
-//                // then ar[i]=0
-//                // codeword[i] = 0 ----
-//                // redundant bits are intialized
-//                // with value 0
-//                ar[i] = 0;
-//            }
-//            else {
-//
-//                // codeword[i] = dataword[j]
-//                ar[i] = (int)(str.charAt(j) - '0');
-//                j++;
-//            }
-//        }
-//        return ar;
-//    }
-//
-//    // Driver code
-//    public static void main(String[] args)
-//    {
-//
-//        // input message
-//        String str = "0101"; // значение для ввода
-//        int M = str.length();
-//        int r = 1;
-//
-//        while (Math.pow(2, r) < (M + r + 1)) {
-//            // r is number of redundant bits
-//            r++;
-//        }
-//        int[] ar = generateCode(str, M, r);
-//
-//        System.out.println("Generated hamming code "); // поле для ответа
-//        ar = calculation(ar, r);
-//        print(ar);
-//    }
-//}
-    // Result (в данном примере выглядит так ) :
-    //Generated hamming code
-    //r1 = 0  // r1 , r2 , r4 -  это лишние биты
-    //r2 = 1
-    //r4 = 0
-    //0100101
+ //HEX TO DEC , https://www.geeksforgeeks.org/program-for-hexadecimal-to-decimal/
+    //// Java program to convert hexadecimal to decimal
+ //import java.io.*;
+ //
+ //class GFG
+ //{
+ //    // Function to convert hexadecimal to decimal
+ //    static int hexadecimalToDecimal(String hexVal)
+ //    {
+ //        int len = hexVal.length();
+ //
+ //        // Initializing base value to 1, i.e 16^0
+ //        int base = 1;
+ //
+ //        int dec_val = 0;
+ //
+ //        // Extracting characters as digits from last character
+ //        for (int i=len-1; i>=0; i--)
+ //        {
+ //            // if character lies in '0'-'9', converting
+ //            // it to integral 0-9 by subtracting 48 from
+ //            // ASCII value
+ //            if (hexVal.charAt(i) >= '0' && hexVal.charAt(i) <= '9')
+ //            {
+ //                dec_val += (hexVal.charAt(i) - 48)*base;
+ //
+ //                // incrementing base by power
+ //                base = base * 16;
+ //            }
+ //
+ //            // if character lies in 'A'-'F' , converting
+ //            // it to integral 10 - 15 by subtracting 55
+ //            // from ASCII value
+ //            else if (hexVal.charAt(i) >= 'A' && hexVal.charAt(i) <= 'F')
+ //            {
+ //                dec_val += (hexVal.charAt(i) - 55)*base;
+ //
+ //                // incrementing base by power
+ //                base = base*16;
+ //            }
+ //        }
+ //        return dec_val;
+ //    }
+ //
+ //    // driver program
+ //    public static void main (String[] args)
+ //    {
+ //        String hexNum = "1A";
+ //        System.out.println(hexadecimalToDecimal(hexNum));
+ //    }
+ //}
+    //////////////////////////////////////////////////////////////////////////////////////////////
     public enum NumeralSystem{
         BIN, DEC, HEX;
 
