@@ -26,12 +26,16 @@ public class MainActivity extends AppCompatActivity {
     private OperatorsRadioGroup operatorGroup;
     private NumeralSysRadioGroup numeralSystemRadioGroup;
 
-    private InputElement convertInput, convertResultInput;
+    private InputElement convertInput, convertResultInput, convertBinInput, convertHexInput, convertDecInput;
 
+
+    private String convBin, convDec, convHex;
 
     private String number1, number2;
     private String calculateResult = "";
     private String convertResultValue = "";
+
+
 
     private Calculate.NumeralSystem numSystem;
     private Calculate.Operator operator;
@@ -58,7 +62,11 @@ public class MainActivity extends AppCompatActivity {
         convertInput = new InputElement(findViewById(R.id.convert_input));
         convertResultInput = new InputElement(findViewById(R.id.convert_result));
 
-        addListenerOnSpinnerItemSelection();
+        convertBinInput = new InputElement(findViewById(R.id.convertBin));
+        convertDecInput = new InputElement(findViewById(R.id.convertDec));
+        convertHexInput = new InputElement(findViewById(R.id.convertHex));
+
+//        addListenerOnSpinnerItemSelection();
         addListenerOnConvertTypeSpinner();
 
     }
@@ -68,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
         selectConvertType.setOnItemSelectedListener(new ConvertTypeSelectedListener());
     }
 
-    public void addListenerOnSpinnerItemSelection() {
-        bitSelectSpinner = findViewById(R.id.bit_select_spinner);
-        bitSelectSpinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-    }
+//    public void addListenerOnSpinnerItemSelection() {
+//        bitSelectSpinner = findViewById(R.id.bit_select_spinner);
+//        bitSelectSpinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+//    }
 
     public void onOperatorSelect(View v){
         setOperator();
@@ -186,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onConvertClick(View view){
+    public void onConvertCodesClick(View view){
         Calculate.ConvertType type = CalculatorState.getConvertType();
         String initial = convertInput.getConvertedValue();
 
@@ -214,6 +222,41 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onConvertBinDecHexClick(View view){
+        String bin = convertBinInput.getConvertedValue();
+        String dec = convertDecInput.getConvertedValue();
+        String hex = convertHexInput.getConvertedValue();
+
+        String errorInField = "bin";
+        try {
+            if (!bin.isEmpty()) {
+                convBin = bin;
+                convDec = Calculate.binToDec(bin);
+                convHex = Calculate.binToHex(bin);
+
+            } else if (!dec.isEmpty()) {
+                errorInField = "dec";
+                convDec = dec;
+                convBin = Calculate.decToBin(dec);
+                convHex = Calculate.decToHex(dec);
+
+            } else if (!hex.isEmpty()) {
+                errorInField = "hex";
+                convHex = hex;
+                convBin = Calculate.hexToBin(hex);
+                convDec = Calculate.hexToDec(hex);
+            } else {
+                showError("Please set at least one value: bin, dec, hex");
+            }
+        }catch (NumberFormatException e){
+            showError("Incorrect value in '"+errorInField+"'");
+        }
+
+        updateConvertedBinHexDecResultsOnUi();
+
+    }
+
+
     private void updateCalculatedResultsOnUi(){
         resultInput.setValue(calculateResult);
         Log.log("Result was updated with '"+ calculateResult +"'.");
@@ -222,6 +265,12 @@ public class MainActivity extends AppCompatActivity {
     private void updateConvertedResultsOnUi(){
         convertResultInput.setValue(convertResultValue);
         Log.log("Result was updated with '"+ convertResultValue +"'.");
+    }
+
+    private void updateConvertedBinHexDecResultsOnUi(){
+        convertBinInput.setValue(convBin);
+        convertDecInput.setValue(convDec);
+        convertHexInput.setValue(convHex);
     }
 
     public void onResetClick(View v){
@@ -233,6 +282,13 @@ public class MainActivity extends AppCompatActivity {
         convertInput.clear();
         Log.log("Reset all values.");
 
+    }
+
+    public void onClearBinDecHex(View view){
+        convertDecInput.clear();
+        convertBinInput.clear();
+        convertHexInput.clear();
+        Log.log("Bin/Dec/Hex values have been cleared.");
     }
 
 }

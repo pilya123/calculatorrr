@@ -298,7 +298,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Spinner
+    <!--<Spinner
         android:id="@+id/bit_select_spinner"
         android:layout_width="141dp"
         android:layout_height="30dp"
@@ -306,7 +306,7 @@
         android:layout_marginEnd="20dp"
         android:entries="@array/bits"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
         android:id="@+id/textView9"
@@ -329,7 +329,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/convertBin"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -340,7 +340,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/convertDec"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -358,9 +358,42 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="460dp"
         android:layout_marginBottom="252dp"
-        android:text="hex"
+        android:text="@string/hex"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/convertHex"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="456dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/convertBinDecHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="368dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onConvertBinDecHexClick"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearBinDecHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onClearBinDecHex"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -408,7 +441,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="308dp"
             android:layout_marginTop="28dp"
-            android:onClick="onConvertClick"
+            android:onClick="onConvertCodesClick"
             android:text="@string/convert"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -426,321 +459,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="456dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/convert2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="415dp"
-        android:layout_marginEnd="55dp"
-        android:text="convert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="240dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="364dp"
-        android:layout_marginTop="230dp"
-        android:text="9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="230dp"
-        android:text="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="230dp"
-        android:text="2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="324dp"
-        android:layout_marginTop="230dp"
-        android:text="8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="230dp"
-        android:text="6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="230dp"
-        android:text="5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginTop="230dp"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="230dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="230dp"
-        android:text="4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="230dp"
-        android:text="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
--->
-
-
-    <!--
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="212dp"
-        android:text="Hamming (7,4) code"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText13"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="522dp"
-        android:layout_marginBottom="169dp"
-        android:ems="10"
-        android:hint="data(binary)"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="568dp"
-        android:layout_marginBottom="144dp"
-        android:text="Result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText14"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="589dp"
-        android:layout_marginBottom="102dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="212dp"
-        android:text="Gray to Binary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="522dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="169dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="147dp"
-        android:layout_marginBottom="144dp"
-        android:text="Result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="589dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="102dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="652dp"
-        android:layout_marginBottom="60dp"
-        android:text="Parity bit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="642dp"
-        android:layout_marginBottom="49dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="696dp"
-        android:layout_marginBottom="16dp"
-        android:text="Result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText15"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="685dp"
-        android:layout_marginBottom="6dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <RadioGroup-->
-    <!--        android:layout_width="92dp"-->
-    <!--        android:layout_height="107dp"-->
-    <!--        android:layout_marginTop="372dp"-->
-    <!--        android:layout_marginEnd="4dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent">-->
-
-    <!--        <RadioButton-->
-    <!--            android:id="@+id/radioButton8bits"-->
-    <!--            android:layout_width="89dp"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="8bits" />-->
-
-    <!--        <RadioButton-->
-    <!--            android:id="@+id/radioButton16bits"-->
-    <!--            android:layout_width="89dp"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="16bits" />-->
-
-    <!--        <RadioButton-->
-    <!--            android:id="@+id/radioButton32bits"-->
-    <!--            android:layout_width="89dp"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="32bits" />-->
-    <!--    </RadioGroup>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
