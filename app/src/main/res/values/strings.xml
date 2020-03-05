@@ -22,6 +22,7 @@
     <string name="number_2_or_value_for_sh_r_l">number 2 or value for sh-r/l</string>
     <string name="convert">Convert</string>
     <string name="result">Result</string>
+    <string name="clear">Clear</string>
     <string-array name="bits">
         <item>8bits</item>
         <item>16bits</item>

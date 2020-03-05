@@ -1,5 +1,7 @@
 package bin.hex.calculator1.math;
 
+import java.math.BigInteger;
+
 import bin.hex.calculator1.util.Log;
 
 public class Calculate {
@@ -386,6 +388,37 @@ public class Calculate {
     public static String convertParity(String initial){
         return ParityCode.calculate(initial);
     }
+
+    public static String binToDec(String bin){
+        int decimal = Integer.parseInt(bin, 2);
+        return String.valueOf(decimal);
+    }
+
+    public static String binToHex(String bin){
+        int decimal = Integer.parseInt(bin,2);
+        return Integer.toString(decimal,16);
+    }
+
+    public static String decToBin(String dec){
+        int d = Integer.parseInt(dec);
+        return Integer.toBinaryString(d);
+    }
+
+    public static String decToHex(String dec){
+        int d = Integer.parseInt(dec);
+        return Integer.toHexString(d);
+    }
+
+    public static String hexToBin(String hex){
+        return new BigInteger(hex, 16).toString(2);
+    }
+
+    public static String hexToDec(String hex){
+        int decimal = Integer.parseInt(hex,16);
+        return Integer.toString(decimal);
+    }
+
+
 
 
 
