@@ -318,11 +318,11 @@ public class Calculate {
     }
 
 
-    private static Integer calculateOperator(int x, int y, Operator o){
+    private static Long calculateOperator(long x, long y, Operator o){
         switch (o){
             default:
                 Log.log("Not valid operator for bin <" + o + ">.");
-                return 0;
+                return 0L;
             case SH_L:
                 return shitLeft(x, y);
             case SH_R:
@@ -338,43 +338,43 @@ public class Calculate {
         }
     }
 
-    private static Integer shitLeft(int value, int position){
+    private static Long shitLeft(long value, long position){
         return value << position;
     }
 
-    private static Integer shitRight(int value, int position){
+    private static Long shitRight(long value, long position){
         return value >> position;
     }
 
 
     public static String getBin(String x, String y, Operator o){
-        int v1 = Integer.parseInt(x, 2);
-        int v2;
+        long v1 = Long.parseLong(x, 2);
+        long v2;
         if(o == Operator.SH_L || o == Operator.SH_R){
-            v2 = Integer.parseInt(y);
+            v2 = Long.parseLong(y);
         }else{
-            v2 = Integer.parseInt(y, 2);
+            v2 = Long.parseLong(y, 2);
         }
-        int result = calculateOperator(v1, v2, o);
-        return Integer.toBinaryString(result);
+        long result = calculateOperator(v1, v2, o);
+        return Long.toBinaryString(result);
     }
 
     public static String getDec(String x, String y, Operator o){
-        int v1 = Integer.parseInt(x);
-        int v2 = Integer.parseInt(y);
+        long v1 = Long.parseLong(x);
+        long v2 = Long.parseLong(y);
         return String.valueOf(calculateOperator(v1, v2, o));
     }
 
     public static String getHex(String x, String y, Operator o){
-        int v1 = Integer.parseInt(x, 16);
-        int v2 = Integer.parseInt(y, 16);
+        long v1 = Long.parseLong(x, 16);
+        long v2 = Long.parseLong(y, 16);
         System.out.println("Converted INT (from hex) value1 = '"+v1+"', value2 = '"+v2+"'");
-        int result = calculateOperator(v1, v2, o);
-        return Integer.toHexString(result);
+        long result = calculateOperator(v1, v2, o);
+        return Long.toHexString(result);
     }
 
-    public static String toBinary(int x, Bit bit){
-        return String.format(bit.getFormatVal(), Integer.toBinaryString(x)).replaceAll(" ", "0");
+    public static String toBinary(long x, Bit bit){
+        return String.format(bit.getFormatVal(), Long.toBinaryString(x)).replaceAll(" ", "0");
     }
 
     public static String convertHamming(String initial){
@@ -390,23 +390,23 @@ public class Calculate {
     }
 
     public static String binToDec(String bin){
-        int decimal = Integer.parseInt(bin, 2);
+        long decimal = Long.parseLong(bin, 2);
         return String.valueOf(decimal);
     }
 
     public static String binToHex(String bin){
-        int decimal = Integer.parseInt(bin,2);
-        return Integer.toString(decimal,16);
+        long decimal = Long.parseLong(bin,2);
+        return Long.toString(decimal,16);
     }
 
     public static String decToBin(String dec){
-        int d = Integer.parseInt(dec);
-        return Integer.toBinaryString(d);
+        long d = Long.parseLong(dec);
+        return Long.toBinaryString(d);
     }
 
     public static String decToHex(String dec){
-        int d = Integer.parseInt(dec);
-        return Integer.toHexString(d);
+        long d = Long.parseLong(dec);
+        return Long.toHexString(d);
     }
 
     public static String hexToBin(String hex){
@@ -414,8 +414,8 @@ public class Calculate {
     }
 
     public static String hexToDec(String hex){
-        int decimal = Integer.parseInt(hex,16);
-        return Integer.toString(decimal);
+        long decimal = Long.parseLong(hex,16);
+        return Long.toString(decimal);
     }
 
 

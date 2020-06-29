@@ -24,7 +24,7 @@ class ParityCode
     }
 
     static String calculate(String initial){
-        int x = Integer.valueOf(initial);
+        int x = Integer.parseInt(initial);
 
         Log.log(x + " in binary is " + Integer.toBinaryString(x));
 
