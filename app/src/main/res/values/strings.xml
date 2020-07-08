@@ -23,6 +23,9 @@
     <string name="convert">Convert</string>
     <string name="result">Result</string>
     <string name="clear">Clear</string>
+    <string name="open_main_screen">Open main screen</string>
+    <string name="ieee_754_floating_point_converter">IEEE-754 Floating Point Converter</string>
+    <string name="ieee_converter_todo">IEEE Converter (TODO)</string>
     <string-array name="bits">
         <item>8bits</item>
         <item>16bits</item>
