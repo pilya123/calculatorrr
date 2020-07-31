@@ -54,7 +54,7 @@
     <string name="binary">Binary</string>
     <string name="decimal">Decimal</string>
 
-    <string name="about_message">&#169; 2015 Ian Macalinao. Released under the MIT license.\n\nGitHub:\nhttps://github.com/simplyianm/IEEE754Converter\n\nFeedback:\nme@ian.pw</string>
+    <string name="about_message">&#169; 2020 </string>
     <string name="ok">Coolbeans</string>
     <string name="ieee_754_floating_point_converter_v2">IEEE-754 Floating Point Converter v2</string>
 </resources>

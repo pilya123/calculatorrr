@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_1);
+        setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.open_main_screen);
         button.setOnClickListener(new View.OnClickListener() {
@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        Button button3 = findViewById(R.id.IEEE_converter_v2);
-//        button3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openIEEEConverter_v2();
-//            }
-//        });
+        Button button3 = findViewById(R.id.IEEE_converter_v2);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openIEEEConverter_v2();
+            }
+        });
 
     }
 
