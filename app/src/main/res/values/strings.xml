@@ -36,5 +36,26 @@
         <item>Gray</item>
         <item>Parity</item>
     </string-array>
+
+<!--    <string name="app_name">IEEE-754 Converter</string>-->
+
+    <string name="hello_world">Hello world!</string>
+    <string name="about">About</string>
+    <string name="enter_number">Enter a decimal number (e.g. 100, 1.4)</string>
+    <string name="x32">32-bit</string>
+    <string name="x64">64-bit</string>
+
+    <string name="breakdown">Breakdown</string>
+    <string name="sign">Sign</string>
+    <string name="exponent">Exponent</string>
+    <string name="mantissa">Mantissa</string>
+
+    <string name="representation">Representation</string>
+    <string name="binary">Binary</string>
+    <string name="decimal">Decimal</string>
+
+    <string name="about_message">&#169; 2020 </string>
+    <string name="ok">Coolbeans</string>
+    <string name="ieee_754_floating_point_converter_v2">IEEE-754 Floating Point Converter v2</string>
 </resources>
 

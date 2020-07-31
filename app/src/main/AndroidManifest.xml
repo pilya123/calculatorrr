@@ -10,18 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".pages.IEEECoverterPage"/>
-        <activity android:name=".pages.Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".pages.MainCalculator"/>
+        <activity android:name=".pages.IEEECoverterPage"/>
+        <activity android:name=".pages.IEEEConverter_v2"/>
+
     </application>
 
 </manifest>

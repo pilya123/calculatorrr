@@ -4,8 +4,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
-import bin.hex.calculator1.MainActivity;
-import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
 public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
