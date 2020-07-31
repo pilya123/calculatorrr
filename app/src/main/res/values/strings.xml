@@ -31,7 +31,7 @@
         <item>16bits</item>
         <item>32bits</item>
     </string-array>
-    <string-array name="converter_types">
+    <string-array name="spinner">
         <item>Hamming</item>
         <item>Gray</item>
         <item>Parity</item>
