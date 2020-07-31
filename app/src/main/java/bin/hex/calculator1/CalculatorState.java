@@ -13,7 +13,7 @@ public class CalculatorState {
         CONVERT_TYPE = type;
     }
 
-    static Calculate.ConvertType getConvertType(){
+    public static Calculate.ConvertType getConvertType(){
         return CONVERT_TYPE;
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pages.Activity1">
+    tools:context=".MainActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,12 +26,22 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/IEEE_converter"
+            android:id="@id/conver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="73dp"
             android:layout_marginTop="141dp"
             android:text="@string/ieee_754_floating_point_converter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/IEEE_converter_v2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="236dp"
+            android:text="@string/ieee_754_floating_point_converter_v2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
