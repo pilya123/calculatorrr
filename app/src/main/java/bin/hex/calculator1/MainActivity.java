@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import bin.hex.calculator1.pages.IEEEConverter_v2;
 import bin.hex.calculator1.pages.IEEECoverterPage;
-import bin.hex.calculator1.pages.MainCalculator;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,12 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.open_main_screen);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMainCalPage();
-            }
-        });
+
 
         Button button2 = findViewById(R.id.IEEE_converter);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -45,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void openMainCalPage(){
-        Intent intent = new Intent(this, MainCalculator.class);
-        startActivity(intent);
-    }
+
 
     private void openIEEEConverter(){
         Intent intent = new Intent(this, IEEECoverterPage.class);
