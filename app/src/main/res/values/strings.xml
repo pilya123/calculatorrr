@@ -59,5 +59,7 @@
     <string name="ieee_754_floating_point_converter_v2">IEEE-754 Floating Point Converter v2</string>
     <string name="gray">Gray</string>
     <string name="hamming_parity">Hamming/Parity</string>
+    <string name="input_hex_value">input hex value</string>
+    <string name="parity">Parity</string>
 </resources>
 

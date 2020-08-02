@@ -381,6 +381,11 @@ public class Calculate {
         return HammingCode.calculate(initial);
     }
 
+    public static String convertEndianness(String initial){
+        //TODO: add formula
+        return "<not yet implemented>";
+    }
+
     public static String convertToGray(String initial){
         return GrayCode.binaryToGray(initial);
     }
