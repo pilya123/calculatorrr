@@ -264,6 +264,28 @@ public class Calculate {
 
     }
 
+    public enum GreyConvertType {
+        GREY_TO_BIN("Grey to bin"), GRAY_TO_HEX("Gray to hex");
+        private String name;
+
+        GreyConvertType(String name){
+            this.name = name;
+        }
+
+        public static GreyConvertType get(String v){
+            switch (v.toLowerCase()){
+                default:
+                    Log.log("Unknown convert type '"+v+"'");
+                    return null;
+                case "grey to bin":
+                    return GREY_TO_BIN;
+                case "grey to hex":
+                    return GRAY_TO_HEX;
+            }
+        }
+
+    }
+
     public enum Operator{
         AND, OR, XOR, NOT, SH_L, SH_R;
 
@@ -388,6 +410,11 @@ public class Calculate {
 
     public static String convertToGray(String initial){
         return GrayCode.binaryToGray(initial);
+    }
+
+    public static String greyToHex(String initial){
+        //TODO: add formula
+        return "<not yet implemented>";
     }
 
     public static String convertParity(String initial){

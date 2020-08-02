@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gray_types_list" >
+        <item name= "Gray to bin">Gray to bin</item>
+        <item name= "Gray to hex">Gray to hex</item>
+    </string-array>
+</resources>

@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = findViewById(R.id.IEEE_converter);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPage(IEEECoverterPage.class);
-            }
-        });
+//        Button button2 = findViewById(R.id.IEEE_converter);
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openPage(IEEECoverterPage.class);
+//            }
+//        });
 
         Button button3 = findViewById(R.id.IEEE_converter_v2);
         button3.setOnClickListener(new View.OnClickListener() {

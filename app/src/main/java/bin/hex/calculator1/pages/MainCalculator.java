@@ -1,13 +1,10 @@
 package bin.hex.calculator1.pages;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import bin.hex.calculator1.CalculatorState;
@@ -15,13 +12,12 @@ import bin.hex.calculator1.R;
 import bin.hex.calculator1.elements.InputElement;
 import bin.hex.calculator1.elements.NumeralSysRadioGroup;
 import bin.hex.calculator1.elements.OperatorsRadioGroup;
-import bin.hex.calculator1.listeners.ConvertTypeSelectedListener;
 import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
 import static android.widget.Toast.makeText;
 
-public class MainCalculator extends AppCompatActivity {
+public class MainCalculator extends AbstractPage {
 
     private InputElement inputNumber_1, inputNumber_2,  resultInput;
     private OperatorsRadioGroup operatorGroup;
@@ -181,9 +177,9 @@ public class MainCalculator extends AppCompatActivity {
 
     }
 
-    private void showError(String msg){
-        makeText(MainCalculator.this, msg, Toast.LENGTH_SHORT).show();
-    }
+//    private void showError(String msg){
+//        makeText(MainCalculator.this, msg, Toast.LENGTH_SHORT).show();
+//    }
 
     private boolean assertIsNotTrue(boolean condition, String error){
         if(condition){

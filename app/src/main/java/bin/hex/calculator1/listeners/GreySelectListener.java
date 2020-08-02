@@ -7,11 +7,11 @@ import bin.hex.calculator1.CalculatorState;
 import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
-public class ConvertTypeSelectedListener implements AdapterView.OnItemSelectedListener {
+public class GreySelectListener implements AdapterView.OnItemSelectedListener {
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         String value = parent.getItemAtPosition(pos).toString();
-        CalculatorState.setConvertType(Calculate.ConvertType.get(value));
+        CalculatorState.setGreyConvertType(Calculate.GreyConvertType.get(value));
         Log.log("Value selected: " + value);
 
     }

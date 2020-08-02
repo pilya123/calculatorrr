@@ -1,5 +1,7 @@
 package bin.hex.calculator1.pages;
 
+import android.widget.AdapterView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,5 +20,11 @@ public abstract class AbstractPage extends AppCompatActivity {
     protected void updateValueOnUi(InputElement input, String value){
         input.setValue(value);
         Log.log("Input was updated with '"+ value +"'.");
+    }
+
+    public Spinner addListenerOnConvertTypeSpinner(AdapterView.OnItemSelectedListener listener, int id){
+        Spinner spinner = findViewById(id);
+        spinner.setOnItemSelectedListener(listener);
+        return spinner;
     }
 }
