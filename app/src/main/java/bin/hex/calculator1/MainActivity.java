@@ -7,8 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import bin.hex.calculator1.pages.GreyPage;
+import bin.hex.calculator1.pages.HammingParityPage;
 import bin.hex.calculator1.pages.IEEEConverter_v2;
 import bin.hex.calculator1.pages.IEEECoverterPage;
+import bin.hex.calculator1.pages.MainCalculator;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,13 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.open_main_screen);
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPage(MainCalculator.class);
+            }
+        });
 
         Button button2 = findViewById(R.id.IEEE_converter);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openIEEEConverter();
+                openPage(IEEECoverterPage.class);
             }
         });
 
@@ -34,21 +42,30 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openIEEEConverter_v2();
+                openPage(IEEEConverter_v2.class);
+            }
+        });
+
+        Button button4 = findViewById(R.id.grey_activity_btn);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPage(GreyPage.class);
+            }
+        });
+
+        Button button5 = findViewById(R.id.hamming_parity);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPage(HammingParityPage.class);
             }
         });
 
     }
 
-
-
-    private void openIEEEConverter(){
-        Intent intent = new Intent(this, IEEECoverterPage.class);
-        startActivity(intent);
-    }
-
-    private void openIEEEConverter_v2(){
-        Intent intent = new Intent(this, IEEEConverter_v2.class);
+    private void openPage(Class <?> clss){
+        Intent intent = new Intent(this, clss);
         startActivity(intent);
     }
 

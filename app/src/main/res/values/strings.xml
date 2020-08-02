@@ -57,5 +57,7 @@
     <string name="about_message">&#169; 2020 </string>
     <string name="ok">Coolbeans</string>
     <string name="ieee_754_floating_point_converter_v2">IEEE-754 Floating Point Converter v2</string>
+    <string name="gray">Gray</string>
+    <string name="hamming_parity">Hamming/Parity</string>
 </resources>
 

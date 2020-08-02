@@ -18,6 +18,8 @@
         <activity android:name=".pages.MainCalculator"/>
         <activity android:name=".pages.IEEECoverterPage"/>
         <activity android:name=".pages.IEEEConverter_v2"/>
+        <activity android:name=".pages.GreyPage"/>
+        <activity android:name=".pages.HammingParityPage"/>
 
     </application>
 
