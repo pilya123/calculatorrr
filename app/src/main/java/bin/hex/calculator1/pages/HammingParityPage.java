@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import bin.hex.calculator1.R;
 
-public class IEEECoverterPage extends AppCompatActivity {
+public class HammingParityPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.deprecated_ieee_converter);
+        setContentView(R.layout.activity_hamming__parity_endianness);
     }
 }
