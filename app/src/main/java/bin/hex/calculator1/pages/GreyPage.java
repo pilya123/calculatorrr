@@ -99,7 +99,7 @@ public class GreyPage extends AbstractPage {
         }catch (NumberFormatException e){
             showError("Only Integer is allowed for Grey K of N input.");
         }
-        updateValueOnUi(grey1_of_n_output, result);
+        updateValueOnUi(greyK_of_N_output, result);
     }
 
 }
