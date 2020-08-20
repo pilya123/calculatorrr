@@ -69,12 +69,10 @@
             android:id="@+id/buttonToConvertGrayToBinHex"
             android:layout_width="90dp"
             android:layout_height="40dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="294dp"
             android:text="CONVERT"
-            android:onClick="onGreyConvertClick"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteY="46dp" />
 
         <EditText
             android:id="@+id/output_gray_bin_hex"
@@ -95,35 +93,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="179dp"
-        android:layout_marginTop="158dp"
         android:text="Gray 1 of n"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="158dp" />
 
     <EditText
-        android:id="@+id/grey_one_of_n_input"
+        android:id="@+id/editText16"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="193dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="193dp" />
 
     <RadioGroup
         android:layout_width="68dp"
         android:layout_height="202dp"
         android:layout_marginStart="327dp"
-        android:layout_marginTop="193dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteY="193dp">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="57dp"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
             android:text="1-BIT" />
 
         <Button
@@ -146,37 +140,33 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/grey_one_of_n_output"
+        android:id="@+id/editText17"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="350dp"
         android:ems="10"
         android:hint="@string/result"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="350dp" />
 
     <Button
         android:id="@+id/buttonToConvertGray1OfN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:layout_marginTop="272dp"
         android:text="CONVERT"
-        android:onClick="onGray1ofNClick"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="272dp" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="178dp"
-        android:layout_marginTop="411dp"
         android:text="Gray k of n"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="411dp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -199,7 +189,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/gray_k_input"
+        android:id="@+id/editText18"
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginStart="28dp"
@@ -210,7 +200,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/gray_n_input"
+        android:id="@+id/editText19"
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginStart="127dp"
@@ -226,21 +216,19 @@
         android:layout_height="45dp"
         android:layout_marginStart="219dp"
         android:layout_marginTop="475dp"
-        android:onClick="onGrayKofNClick"
         android:text="CONVERT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/grey_k_of_n_output"
+        android:id="@+id/editText20"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="538dp"
         android:ems="10"
         android:hint="@string/result"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="538dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

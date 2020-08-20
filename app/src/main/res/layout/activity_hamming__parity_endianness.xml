@@ -63,8 +63,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="406dp"
         android:layout_height="177dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="378dp"
+        android:layout_marginTop="512dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -82,8 +81,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="406dp"
-        android:layout_height="177dp"
+        android:layout_width="393dp"
+        android:layout_height="271dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="198dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,12 +126,30 @@
             android:layout_width="368dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="176dp"
             android:ems="10"
             android:hint="@string/result"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/littleEndian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:text="Little Endian"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="108dp" />
+
+        <Button
+            android:id="@+id/bigEndian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="176dp"
+            android:text="Big Endian"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="108dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
