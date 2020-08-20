@@ -7,6 +7,7 @@ import bin.hex.calculator1.CalculatorState;
 import bin.hex.calculator1.math.Calculate;
 import bin.hex.calculator1.util.Log;
 
+@Deprecated
 public class ConvertTypeSelectedListener implements AdapterView.OnItemSelectedListener {
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {

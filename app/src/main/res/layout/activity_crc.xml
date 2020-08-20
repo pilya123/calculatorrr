@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,26 +9,32 @@
         android:id="@+id/crc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="16dp"
         android:text="CRC"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText9"
         android:layout_width="390dp"
         android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/input_type"
         android:layout_width="70dp"
         android:layout_height="30dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="102dp"
         android:text="Input type:"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:layout_width="69dp"
