@@ -247,10 +247,11 @@ public class Calculate {
             this.name = name;
         }
 
+        @Deprecated
         public static ConvertType get(String v){
             switch (v.toLowerCase()){
                 default:
-                    Log.log("Unknown convert type '"+v+"'");
+                    Log.log("Convert type '"+v+"'");
                     return null;
                 case "hamming":
                     return HAMMING;
@@ -277,9 +278,9 @@ public class Calculate {
                 default:
                     Log.log("Unknown convert type '"+v+"'");
                     return null;
-                case "grey to bin":
+                case "gray to bin":
                     return GREY_TO_BIN;
-                case "grey to hex":
+                case "gray to hex":
                     return GRAY_TO_HEX;
             }
         }
@@ -408,8 +409,8 @@ public class Calculate {
         return "<not yet implemented>";
     }
 
-    public static String convertToGray(String initial){
-        return GrayCode.binaryToGray(initial);
+    public static String convertGrayToBin(String initial){
+        return GrayCode.grayToBinary(initial);
     }
 
     public static String greyToHex(String initial){

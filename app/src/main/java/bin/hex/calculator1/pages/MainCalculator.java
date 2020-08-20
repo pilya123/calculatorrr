@@ -208,7 +208,7 @@ public class MainCalculator extends AbstractPage {
                 convertResultValue = Calculate.convertHamming(initial);
                 break;
             case GRAY:
-                convertResultValue = Calculate.convertToGray(initial);
+                convertResultValue = Calculate.convertGrayToBin(initial);
                 break;
             case PARITY:
                 convertResultValue = Calculate.convertParity(initial);
