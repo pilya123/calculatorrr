@@ -62,5 +62,7 @@
     <string name="input_hex_value">input hex value</string>
     <string name="parity">Parity</string>
     <string name="gray_input">Gray input</string>
+    <string name="crc">CRC</string>
+    <string name="crc">CRC</string>
 </resources>
 

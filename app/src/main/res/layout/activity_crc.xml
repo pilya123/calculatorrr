@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".pages.CrcPage">
 
     <TextView
         android:id="@+id/crc"
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
         android:layout_marginTop="16dp"
-        android:text="CRC"
+        android:text="@string/crc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,8 +40,10 @@
     <RadioGroup
         android:layout_width="69dp"
         android:layout_height="72dp"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="102dp">
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="102dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/input_type_bin"
@@ -59,15 +62,19 @@
         android:id="@+id/output_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="102dp"
         android:text="Output type:"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:layout_width="79dp"
         android:layout_height="106dp"
-        tools:layout_editor_absoluteX="274dp"
-        tools:layout_editor_absoluteY="102dp">
+        android:layout_marginStart="274dp"
+        android:layout_marginTop="102dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/output_type_bin"
@@ -91,8 +98,10 @@
     <RadioGroup
         android:layout_width="99dp"
         android:layout_height="104dp"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="208dp">
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="208dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/crc8"
@@ -117,67 +126,83 @@
         android:id="@+id/algorithm_of_crc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="327dp"
         android:text="Algorithm"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="327dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/result_of_crc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="327dp"
         android:text="Result"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="327dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/crc8_alg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="375dp"
         android:text="CRC -8 :"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="375dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/crc16_alg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="448dp"
         android:text="CRC -16:"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="448dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/crc32_alg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="527dp"
         android:text="CRC -32:"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="527dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText10"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="361dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="361dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText11"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="431dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="431dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText12"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="507dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="507dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
