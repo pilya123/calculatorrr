@@ -20,6 +20,7 @@
         <activity android:name=".pages.IEEEConverter_v2"/>
         <activity android:name=".pages.GreyPage"/>
         <activity android:name=".pages.HammingParityPage"/>
+        <activity android:name=".pages.CrcPage"/>
 
     </application>
 
