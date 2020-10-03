@@ -7,8 +7,8 @@
     tools:context=".pages.HammingParityPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="406dp"
-        android:layout_height="177dp"
+        android:layout_width="402dp"
+        android:layout_height="143dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="164dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:text="Hamming"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,8 +28,8 @@
             android:id="@+id/input_hamming_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
             android:ems="10"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,8 @@
             android:id="@+id/hamming_convert_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="259dp"
-            android:layout_marginTop="41dp"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="20dp"
             android:onClick="onConvertHammingClick"
             android:text="@string/convert"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +50,8 @@
             android:id="@+id/output_hamming_value"
             android:layout_width="390dp"
             android:layout_height="45dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="103dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="84dp"
             android:ems="10"
             android:hint="@string/result"
             android:inputType="number"
@@ -61,19 +61,125 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="406dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="512dp"
+        android:layout_width="411dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="340dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/parity_convert"
+            android:layout_width="86dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="12dp"
+            android:onClick="onConvertParityClick"
+            android:text="@string/convert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="192dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="208dp"
+            android:text="ParityWithCaching"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parity_with_cashing"
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parity_bruce_force"
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="72dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parity_based_on_clearing_set_bin"
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="116dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parity_most_efficient"
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="196dp"
+            android:layout_marginTop="160dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="193dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="128dp"
+            android:text="ParityBasedOnClearingSetBit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="192dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="160dp"
+            android:text="ComputeParityMostEfficient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="191dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="80dp"
+            android:text="ComputeParityBruteForce"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewParity"
             android:layout_width="42dp"
             android:layout_height="21dp"
             android:layout_marginStart="180dp"
-            android:layout_marginTop="16dp"
             android:text="@string/parity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parity_input"
+            android:layout_width="197dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Input value"
+            android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,10 +187,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="393dp"
-        android:layout_height="271dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="198dp"
+        android:layout_width="392dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -92,8 +198,7 @@
             android:id="@+id/textViewEndianness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="164dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="160dp"
             android:text="Endianness"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/input_hex_value"
             android:inputType="number"
@@ -114,8 +219,8 @@
             android:id="@+id/endiannessConvertButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="264dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="16dp"
             android:onClick="onConvertEndiannessClick"
             android:text="@string/convert"
             app:layout_constraintStart_toStartOf="parent"
@@ -123,10 +228,10 @@
 
         <EditText
             android:id="@+id/output_endianness"
-            android:layout_width="368dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="176dp"
+            android:layout_width="367dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="132dp"
             android:ems="10"
             android:hint="@string/result"
             android:inputType="number"
@@ -138,7 +243,7 @@
             android:layout_width="350dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="64dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
