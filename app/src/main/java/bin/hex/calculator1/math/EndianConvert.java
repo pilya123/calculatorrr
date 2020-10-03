@@ -32,7 +32,7 @@ class EndianConvert {
 
         }
         String bigEndian = "0x" + toConvert;
-        Log.log("Little Endian converted: " + toConvert);
+        Log.log("Big Endian converted: " + toConvert);
         return bigEndian;
 
     }

@@ -146,13 +146,13 @@
                 android:id="@+id/littleEndian"
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
-                android:text="Little Endian" />
+                android:text="@string/little_endian" />
 
             <RadioButton
                 android:id="@+id/bigEndian"
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
-                android:text="Big Endian" />
+                android:text="@string/big_endian" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

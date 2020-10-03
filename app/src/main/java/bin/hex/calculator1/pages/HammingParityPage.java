@@ -30,7 +30,7 @@ public class HammingParityPage extends AbstractPage {
 
         endiannessInput = new InputElement(findViewById(R.id.input_endianness_value));
         endiannessResult = new InputElement(findViewById(R.id.output_endianness));
-        endiannessType = new RadioGroupElement((RadioGroup) findViewById(R.id.operator));
+        endiannessType = new RadioGroupElement((RadioGroup) findViewById(R.id.endian_type));
     }
 
     public void onConvertHammingClick(View view) {
