@@ -63,5 +63,7 @@
     <string name="parity">Parity</string>
     <string name="gray_input">Gray to bin input</string>
     <string name="crc">CRC</string>
+    <string name="little_endian">Little Endian</string>
+    <string name="big_endian">Big Endian</string>
 </resources>
 
