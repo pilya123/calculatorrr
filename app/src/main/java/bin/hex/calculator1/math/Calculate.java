@@ -25,6 +25,24 @@ public class Calculate {
         }
     }
 
+    public enum CodingType{
+        CRC_8, CRC_16, CRC_32;
+
+        public static CodingType get(String v){
+            if(v.contains("8")){
+                return CRC_8;
+            }
+            if(v.contains("16")){
+                return CRC_16;
+            }
+            if (v.contains("32")){
+                return CRC_32;
+            }
+            Log.log("Unknown coding type '"+v+"'");
+            return null;
+        }
+    }
+
     public enum ConvertType{
         HAMMING("Hamming"), GRAY("Gray"), PARITY("Parity");
         private String name;
