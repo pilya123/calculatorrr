@@ -17,7 +17,7 @@ public class GreyPage extends AbstractPage {
 
     private InputElement greyInput, greyOutput, grey1_of_n_input, grey1_of_n_output, greyValueInputK, greyValueInputN, greyK_of_N_output;
 
-    private Spinner greyTypeSelect;
+//    private Spinner greyTypeSelect;
 
     private String greyResultValue = "";
 
@@ -36,12 +36,12 @@ public class GreyPage extends AbstractPage {
         greyValueInputN = new InputElement(findViewById(R.id.gray_n_input));
         greyK_of_N_output = new InputElement(findViewById(R.id.grey_k_of_n_output));
 
-        greyTypeSelect = addListenerOnConvertTypeSpinner(new GreySelectListener(), R.id.gray_type_spinner);
+//        greyTypeSelect = addListenerOnConvertTypeSpinner(new GreySelectListener(), R.id.gray_type_spinner);
 
     }
 
     public void onGreyConvertClick(View view){
-        Calculate.GreyConvertType type = CalculatorState.getGreyConvertType();
+        Calculate.GreyConvertType type = Calculate.GreyConvertType.GREY_TO_BIN;//CalculatorState.getGreyConvertType();
         String initial = greyInput.getConvertedValue();
 
         if(initial == null || initial.isEmpty()){
