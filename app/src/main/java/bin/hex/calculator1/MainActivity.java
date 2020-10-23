@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import bin.hex.calculator1.pages.CrcPage;
+import bin.hex.calculator1.pages.CrcPage_v2;
 import bin.hex.calculator1.pages.GreyPage;
 import bin.hex.calculator1.pages.HammingParityPage;
 import bin.hex.calculator1.pages.IEEEConverter_v2;
@@ -55,11 +56,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        Button button6 = findViewById(R.id.crc);
+//        button6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openPage(CrcPage.class);
+//            }
+//        });
+
         Button button6 = findViewById(R.id.crc);
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPage(CrcPage.class);
+                openPage(CrcPage_v2.class);
             }
         });
 
